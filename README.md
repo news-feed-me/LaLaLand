@@ -2,11 +2,11 @@
 
 ## Authors
 
-Asim Himani,
-Akio Suzuki,
-Cora Xiaotong,
-Dan Tang,
-Misha Chavarha
+Asim Himani <br />  
+Akio Suzuki <br />
+Cora Xiaotong <br />
+Dan Tang <br />
+Misha Chavarha <br />
 
 
 ## OVERVIEW:
