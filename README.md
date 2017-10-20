@@ -1,67 +1,46 @@
-# ruby-getting-started
+# FEEDME
 
-A barebones Rails app, which can easily be deployed to Heroku.
+## Authors
 
-This application support the [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby) article - check it out.
+Asim Himani
+Akio Suzuki
+Cora Xiaotong
+Dan Tang
+Misha Chavarha
 
-## Running Locally
 
-Make sure you have Ruby installed.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+## OVERVIEW:
 
-```sh
-$ git clone git@github.com:heroku/ruby-getting-started.git
-$ cd ruby-getting-started
-$ bundle install
-$ bundle exec rake db:create db:migrate
-$ heroku local
-```
+With the advent of digital media readers are overwhelmed with the volume of news and information available on the internet. An individual is left to navigate the numerous news websites and articles alone, and often finds himself lost in the massive amount of information. Our news aggregator web app, FeedMe, aims to simplify the news reading experience for people by acting as a one-stop-shop for the latest news from a variety of publishers, categories and  geographies. Moreover, FeedMe will allow the reader  to have complete control on the categories, locations and publishers he receives news from, with the flexibility of modifying his subscription as he wishes. Thus, we don’t just simplify, we empower the reader.
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Deploying to Heroku
+## How is this problem currently solved?
 
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku run rake db:migrate
-$ heroku open
-```
+Several apps and websites such as Google Current, RSS feeds, Flipboard, Pulse etc. have attempted to aggregate the news for the reader. However, most of them have either been discontinued or do not provide sufficient user interaction, resulting in readers resorting to social media websites such as Twitter to get their news, which allows the user a high degree of interaction.
 
-or
+## How will this project make life easier?
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+Unlike existing news feeds, FeedMe will not only provide a platform for users to read trending news, but also allow them to engage with it and express their opinions. It will provide the perfect intersection between news-reading and social engagement.
+In just one simple step, users will be able to create an account on FeedMe and customize their subscriptions by determining which publishers, categories,  and geographic locations they wish to receive news from. Moreover, once users have an account they will be able to share their favorite news articles on social media, write blogs to express their perspectives and receive notifications.
 
-## Docker
+By combing news-reading with the ability to engage with the content, FeedMe will immensely simplify the user’s experience.
 
-The app can be run and tested using the [Heroku Docker CLI plugin](https://devcenter.heroku.com/articles/local-development-with-docker-compose).
+## Who is the target audience? Who will use your product?
 
-Make sure the plugin is installed:
+While traditional news feed sites target avid news readers, our web app simplifies news-reading so that everyone who wishes to read news can do so in a few simple steps, especially those who have traditionally felt overwhelmed by the volume of articles available online.
 
-    heroku plugins:install heroku-docker
+## What is the scope of your project? Does this project have many individual features, or one main feature (possibility with many subproblems)? These are the ‘epics’ of your project.
 
-Configure Docker and Docker Compose:
+Currently, the goal is to centralize news feeds for the users / subscribers.  With further iterations we plan to incorporate additional features such as news sharing, chatting, blogging, notifications, favorite section and so on. These are the epics / individual features and they will be added to our project with each iteration. We expect our application to scale nicely with the number of features and news channel subscriptions that it can support.
 
-    heroku docker:init
+## What are some sample stories/scenarios? For example, as  a regular user to your site, what types of things can I do? As an admin for your site? These are the ‘stories’ of your project.
 
-And run the app locally:
+As a computer science student who is very passionate about block-chain technology, I would like to keep myself updated about new developments in the field. I can imagine using this application to have access to the aggregated information.
 
-    docker-compose up web
+As a CMPT276 student I rarely have time to scroll and look for new articles that meet my specific needs, therefore with FeedMe I would be able to quickly search for specific articles with specific keywords
 
-The app will now be available on the Docker daemon IP on port 8080.
+As a cricket fan I would use FeedMe to search for relevant articles about specific cricket matches, scorecard updates, analysis reports and highlights.
 
-To work with the local database and do migrations, you can open a shell:
+As an individual running an ecommerce business in men’s style, I would utilize FeedMe’s aggregate feature to facilitate my research on the current and latest style trends in the market and save me a considerable amount of time.
 
-    docker-compose run shell
-    bundle exec rake db:migrate
-
-You can also use Docker to release to Heroku:
-
-    heroku create
-    heroku docker:release
-    heroku open
-
-## Documentation
-
-For more information about using Ruby on Heroku, see these Dev Center articles:
-
-- [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
+As an avid blogger, FeedMe would allow me to openly discuss news articles that are of interest to me with other readers who may share the same interests. 
