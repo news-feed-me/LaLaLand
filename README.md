@@ -2,11 +2,11 @@
 
 ## Authors
 
-Asim Himani <br />  
+Asim Himani  
 Akio Suzuki <br />
 Cora Xiaotong <br />
 Dan Tang <br />
-Misha Chavarha <br />
+Misha Chavarha
 
 
 ## OVERVIEW:
