@@ -2,10 +2,10 @@
 
 ## Authors
 
-Asim Himani
-Akio Suzuki
-Cora Xiaotong
-Dan Tang
+Asim Himani,
+Akio Suzuki,
+Cora Xiaotong,
+Dan Tang,
 Misha Chavarha
 
 
@@ -43,4 +43,4 @@ As a cricket fan I would use FeedMe to search for relevant articles about specif
 
 As an individual running an ecommerce business in men’s style, I would utilize FeedMe’s aggregate feature to facilitate my research on the current and latest style trends in the market and save me a considerable amount of time.
 
-As an avid blogger, FeedMe would allow me to openly discuss news articles that are of interest to me with other readers who may share the same interests. 
+As an avid blogger, FeedMe would allow me to openly discuss news articles that are of interest to me with other readers who may share the same interests.
