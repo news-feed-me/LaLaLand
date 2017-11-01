@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: shrouded-ravine-26332_development_production
-  username: ruby-getting-started
-  password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+  username: shrouded-ravine-26332
+  password: <%= ENV['shrouded-ravine-26332_DATABASE_PASSW0RD'] %>
