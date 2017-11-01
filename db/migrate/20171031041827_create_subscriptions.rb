@@ -1,6 +1,6 @@
 class CreateSubscriptions < ActiveRecord::Migration
   def up
-    create_table :subscriptions, :primary_key => subscription_id do |t|
+    create_table :subscriptions, :primary_key => "subscription_id" do |t|
       t.string "name", :limit => 255
       t.string "url", :limit => 255
       t.string "geography", :limit => 255
