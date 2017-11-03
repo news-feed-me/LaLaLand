@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       redirect_to @user, notice: 'User was successfully created'
     else
       render action: "new"
+    end
   end
 
 end
