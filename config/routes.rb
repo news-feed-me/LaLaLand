@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'users/new'
 
   get "users/new", to: "users#new", as: :signup
+  get "users/login", to: "users#login", as: :login
+  get "welcome/index", to: "welcome#index", as: :home
 
 
   resources :widgets
