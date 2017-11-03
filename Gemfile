@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'simple_form'
+#gem 'rails-footnotes', '>= 3.7.9' :group => :development
+gem 'bootstrap-sass', '~> 2.3.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
