@@ -1,2 +1,14 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1> Sign Up </h1>
+
+<%= form_for @user do |entry| %>
+  <p>
+    <%= entry.label :first_name %>
+    <%= entry.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= entry.submit %>
+  </p>
+<% end %>
+
+<h2> <%= link_to 'Back', home_path %> </h2>
