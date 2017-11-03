@@ -1,14 +1,55 @@
-<h1> Sign Up </h1>
+<div id="newUsers">
 
-<%= form_for @user do |entry| %>
-  <p>
-    <%= entry.label :first_name %>
-    <%= entry.text_field :first_name %>
-  </p>
+  <%= form_for @user do |entry| %>
 
-  <p>
-    <%= entry.submit %>
-  </p>
-<% end %>
+  <div>
+    <p> All fields are required for signup. </p>
+  </div>
 
-<h2> <%= link_to 'Back', home_path %> </h2>
+  <div id="usersSignupTable">
+
+    <h3> Sign Up </h3>
+    <table>
+      <tr>
+        <td> <%= entry.label :first_name %> </td>
+        <td> <%= entry.text_field :first_name %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :last_name %> </td>
+        <td> <%= entry.text_field :last_name %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :username %> </td>
+        <td> <%= entry.text_field :username %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :email %> </td>
+        <td> <%= entry.text_field :email %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :password %> </td>
+        <td> <%= entry.text_field :password %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :birth_date %> </td>
+        <td> <%= entry.text_field :birth_date %> </td>
+      </tr>
+
+    </table>
+
+
+
+    </p>
+
+    <p>
+      <%= entry.submit %>
+    </p>
+  <% end %>
+
+  <h2> <%= link_to 'Back', home_path %> </h2>
+</div>
