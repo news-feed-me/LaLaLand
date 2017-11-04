@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'access/index'
+  
 
   get 'access/login'
 
@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get "users/new", to: "users#new", as: :signup
   get "users/login", to: "users#login", as: :login
   get "welcome/index", to: "welcome#index", as: :home
-
+  get "access/logout", to: "access#logout", as: :logout
+  get 'access/index', to: "access#index", as: :access_index
 
   resources :widgets
   resources :users
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   root 'welcome#index'
+  match ':controller(/:action(/:id))', :via => [:get, :post]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

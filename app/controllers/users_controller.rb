@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :check_log_in, :except => [:create, :new]
   def new
     @user = User.new
   end
