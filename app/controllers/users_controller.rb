@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
 
-<<<<<<< HEAD
+
 
 
   private
@@ -22,10 +22,10 @@ class UsersController < ApplicationController
       params.require(:user).permit(:first_name, :last_name, :username, :email, :birth_date, :password, :country, :profile_picture, :password_digest)
 
     end
-=======
+
   def profile
     @user = User.all
   end
 
->>>>>>> 9cf17243950c659326b510916cbda96b0d801d6b
+
 end
