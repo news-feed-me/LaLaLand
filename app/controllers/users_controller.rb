@@ -8,8 +8,12 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to @user, notice: 'User was successfully created'
     else
-      render action: "new"
+      flash[:notice] = "One or more fields are invalid."
+      flash[:color] = "invalid"
     end
+  end
+
+  def login
   end
 
 end
