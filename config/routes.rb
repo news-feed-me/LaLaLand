@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'access/index'
+
+  get 'access/login'
+
   get 'users/new'
 
   get "users/new", to: "users#new", as: :signup
