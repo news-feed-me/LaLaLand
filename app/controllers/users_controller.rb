@@ -4,16 +4,21 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+
+    @user = User.new(user_params)
     if @user.save
       redirect_to @user, notice: 'User was successfully created'
     else
-      flash[:notice] = "One or more fields are invalid."
-      flash[:color] = "invalid"
+      render action: "new"
     end
   end
 
-  def login
-  end
 
+
+
+  private
+    def user_params
+      params.require(:user).permit(:first_name, :last_name, :username, :eamil, :birth_date, :password, :country, :profile_picture, :password_digest)
+
+    end
 end
