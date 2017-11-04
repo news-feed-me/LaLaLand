@@ -1,1 +1,17 @@
+<!DOCTYPE html>
+<html>
+<div class="header">
+  this is header, it must contain navigation bar and all of the stuff like that.
 
+<div class="articles">
+  <!-- to render string as html you this format, by plce keyword raw before outout-->
+  <%= raw @testArticle.outputHTML %>
+  <% @articles.each do |article| %>
+  <%= raw article.outputHTML %>
+  <% end %>
+</div>
+<div class="footer">
+  this is footer
+</div>
+
+</html>
