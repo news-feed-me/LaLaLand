@@ -1,14 +1,15 @@
 <div id="newUsers">
 
+  <h2 id="backButton"> <%= link_to 'Back', home_path %> </h2>
+
   <%= form_for @user do |entry| %>
 
-  <div>
-    <p> All fields are required for signup. </p>
-  </div>
 
   <div id="usersSignupTable">
 
     <h3> Sign Up </h3>
+
+    <p> All fields are required for signup. </p>
     <table>
       <tr>
         <td> <%= entry.label :first_name %> </td>
@@ -51,5 +52,4 @@
     </p>
   <% end %>
 
-  <h2> <%= link_to 'Back', home_path %> </h2>
 </div>

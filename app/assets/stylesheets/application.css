@@ -1,3 +1,7 @@
+body{
+  background-color: rgb(198, 236, 198);
+}
+
 #welcomeSignupLoginBox{
   float: right;
   display: inline;
@@ -7,6 +11,7 @@
   border-style: solid;
   border-width: 1px;
   box-shadow: 10px 10px 10px grey;
+  background-color: white;
 }
 
 #title{
@@ -28,10 +33,13 @@
   border-style: solid;
   border-width: 1px;
   box-shadow: 10px 10px 10px grey;
-
+  background-color: white;
 
 }
 
+#backButton{
+
+}
 
 td{
   position: relative;
