@@ -16,4 +16,8 @@ class UsersController < ApplicationController
   def login
   end
 
+  def profile
+    @user = User.all
+  end
+
 end
