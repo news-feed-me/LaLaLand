@@ -4,8 +4,9 @@
   this is header, it must contain navigation bar and all of the stuff like that.
 
 <div class="articles">
-
-  this output generates articles
+  <% @articles.each do |article| %>
+  <%= raw article.outputHTML %>
+  <%end%>
 </div>
 
 <div class="category">
@@ -28,7 +29,7 @@
     <%= label_tag(source) %>
       <p>
     <%end  %>
-    <%= submit_tag("get weed") %>
+    <%= submit_tag("get") %>
   <% end %>
 </div>
 

@@ -31,6 +31,7 @@ class UserController < ApplicationController
   def ActionOne
     @categories = getCategories
     @sources = getSources
+    @articles = Array.new
 
     if params.has_key?('category')
       puts "category form detected. the category is: #{params['category']}"
@@ -44,7 +45,11 @@ class UserController < ApplicationController
       end
 
     else
-      puts "puts"
+      href = "./User/ActionOne"
+      imgsrc = "http://www.gettyimages.ca/gi-resources/images/Embed/new/embed2.jpg"
+      article_id = 1
+      text = "Welcome to newsfeed me, Please select category or sources"
+      @articles.push(Article.new(href,imgsrc,article_id,text))
 
     end
     puts "printing param keys2"
@@ -53,11 +58,7 @@ class UserController < ApplicationController
     # function returns list of articles id's by category;
     print getSourcesByCategory('business').class
 
-    href = "https://stackoverflow.com"
-    imgsrc = "http://www.gettyimages.ca/gi-resources/images/Embed/new/embed2.jpg"
-    article_id = 1
-    text = "This is article text, its size has to be adjust to accomodate size format in CSS"
-    @testArticle = Article.new(href,imgsrc,article_id,text)
+
     #make api call. get result;
 
     @categories = getCategories
