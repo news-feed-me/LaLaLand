@@ -1,0 +1,17 @@
+<% @page_title = "Subscriptions" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="subscriptions new">
+  <h2>Create Subscription</h2>
+
+  <%= form_for(:subscription, :url => {:action => 'create'}) do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class-"form-buttons">
+      <%= submit_tag("Create Subscription") %>
+    </div>
+
+  <% end %>
+  </div>
