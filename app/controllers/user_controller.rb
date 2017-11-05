@@ -6,12 +6,19 @@ class UserController < ApplicationController
   #include DesignPatterns
   require 'Article'
   require 'APIFunctions'
+  require 'NewsAPI_Source'
+  require 'NewsAPI_Article'
 
   include APIFunctions
   include HTTParty
+  include NewsAPI_Source
+  include NewsAPI_Article
+
 
   def index
-     #Index code
+    @categories = getCategories
+    @sources = getSources
+
   end
 
   def show
@@ -22,9 +29,30 @@ class UserController < ApplicationController
   # the code included here can and should be refactored into a new
   # action/s.
   def ActionOne
-    # href, src, id, text
+    @categories = getCategories
+    @sources = getSources
 
-    # TODO: NEED TO CREATE COLLECTION CLASS FOR ARTICLES;
+    if params.has_key?('category')
+      puts "category form detected. the category is: #{params['category']}"
+
+      puts "generating list of articles for specific category"
+
+    elsif params.has_key?('sources')
+      puts "sources category found, printing list of categories"
+      params['sources'].each do |source|
+        puts source
+      end
+
+    else
+      puts "puts"
+
+    end
+    puts "printing param keys2"
+
+
+    # function returns list of articles id's by category;
+    print getSourcesByCategory('business').class
+
     href = "https://stackoverflow.com"
     imgsrc = "http://www.gettyimages.ca/gi-resources/images/Embed/new/embed2.jpg"
     article_id = 1
@@ -32,27 +60,8 @@ class UserController < ApplicationController
     @testArticle = Article.new(href,imgsrc,article_id,text)
     #make api call. get result;
 
-    apiCallEconomist= HTTParty.get("https://newsapi.org/v1/articles?source=the-economist&sortBy=top&apiKey=43a167ad5e5943c386c72685062b81c8")
-    #print apiCallEconomist.parsed_response['status']
-    #printAPICallKeys(apiCallEconomist)
-    @articles = []
-    print "printing status of valid key"
-    i = 0;
-    apiCallEconomist.parsed_response['articles'].each do |article|
-      articleUrl =  article['url']
-      imageUrl = article['urlToImage']
-      title = article['title']+":"+article['description']
-      id = i
-      article=Article.new(articleUrl,imageUrl,id,title)
-      @articles << article
-      i=i+1
-    end
-
-
-    #economistArticles = apiCallEconomist.parsed_response['articles']
-
-
-    #iterate from for each rool and get the articles;
+    @categories = getCategories
+    @sources = getSources
 
   end
 

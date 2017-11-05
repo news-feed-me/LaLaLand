@@ -4,12 +4,34 @@
   this is header, it must contain navigation bar and all of the stuff like that.
 
 <div class="articles">
-  <!-- to render string as html you this format, by plce keyword raw before outout-->
-  <%= raw @testArticle.outputHTML %>
-  <% @articles.each do |article| %>
-  <%= raw article.outputHTML %>
+
+  this output generates articles
+</div>
+
+<div class="category">
+  <%= form_tag("/user/ActionOne",id: "category_input", method: "get") do %>
+    <% @categories.each do |category| %>
+      <%= radio_button_tag(:category, category) %>
+      <%= label_tag(:category, category) %>
+      <p>
+    <%end  %>
+    <%= submit_tag("get") %>
   <% end %>
 </div>
+
+<div class="sources">
+  <p> This is list of sources. They correspond to list of articles;
+  <%= form_tag("/user/ActionOne",id: "articles_input", method: "get") do %>
+    <% @sources.each do |source| %>
+
+    <%= check_box_tag("sources[]", source ) %>
+    <%= label_tag(source) %>
+      <p>
+    <%end  %>
+    <%= submit_tag("get weed") %>
+  <% end %>
+</div>
+
 <div class="footer">
   this is footer
 </div>

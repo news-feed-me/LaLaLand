@@ -1,7 +1,7 @@
 #this class outputs the the html which corresponds to the article.
 
 
-# YOU NEED THIS; 
+# YOU NEED THIS;
 class Article
   attr_reader :href, :src, :id, :text
 
