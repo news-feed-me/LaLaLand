@@ -6,11 +6,9 @@ class UserController < ApplicationController
   #require 'NewsAPI2'
   #include DesignPatterns
   require 'Article'
-  require 'APIFunctions'
   require 'NewsAPI_Source'
   require 'NewsAPI_Article'
 
-  include APIFunctions
   include HTTParty
   include NewsAPI_Source
   include NewsAPI_Article
