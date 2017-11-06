@@ -28,6 +28,9 @@ class UserController < ApplicationController
   # the code included here can and should be refactored into a new
   # action/s.
   def ActionOne
+    @apiParser = ApiParser.new(session[:user_name])
+    @subscriptions = @apiParser.getSubscriptions
+
     @categories = getCategories
     @sources = getSources
     @articles = Array.new
@@ -40,17 +43,18 @@ class UserController < ApplicationController
       newsArticles.each do |article|
         href = article['url']
         imgsrc = article['urlToImage']
-        id = i
         text = article['title']
         @articles.push(Article.new(href,imgsrc,id,text))
       end
 
-    elsif params.has_key?('sources')
+    elsif !params || params.has_key?('sources')
+
       puts "sources category found, printing list of categories"
       number_of_sources = params['sources'].length
       puts "number of sources #{number_of_sources}"
-      params['sources'].each do |source|
-        articles = getNewsBySourceID(source)
+
+      @subscriptions.each do |source|
+        articles = getNewsBySourceID(source.source_id)
         i = 0
         articles.each do |article|
 

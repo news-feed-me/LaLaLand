@@ -2,8 +2,8 @@
 
   <h2 id="backButton"> <%= link_to 'Back', home_path %> </h2>
 
-  <%= simple_form_for @user do |entry| %>
 
+  <%= simple_form_for @user do |entry| %>
 
   <div id="usersSignupTable">
 
@@ -22,8 +22,8 @@
       </tr>
 
       <tr>
-        <td> <%= entry.label :username %> </td>
-        <td> <%= entry.text_field :username %> </td>
+        <td> <%= entry.label :user_name %> </td>
+        <td> <%= entry.text_field :user_name %> </td>
       </tr>
 
       <tr>
@@ -48,28 +48,22 @@
         <head> Subscriptions </head>
 
         <% @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"] %>
-        <% @subs.each do |s| %>
 
-        <tr>
-          <td> <%= entry.label s %> </td>
-          <td> <%= entry.check_box :subscribes %> </td>
-        </tr>
-
-        <% end %>
-
-
-
+          <% @subs.each do |ssub| %>
+          <%= check_box_tag("sources[]", ssub ) %>
+          <%= label_tag(ssub) %>
+          <p>
+            <%end  %>
 
       </table>
 
     </div>
 
-
-
     </p>
 
     <p>
-      <%= entry.submit %>
+      <%= submit_tag("submit") %>
+      <!--<%= entry.submit %>-->
     </p>
   <% end %>
 
