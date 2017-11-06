@@ -1,3 +1,43 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.articles {
+  margin: 50px;
+  width: 1000px;
+
+  border-style: solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.article_image {
+  display:block;
+  height:150px;
+  width:auto;
+  align-self: auto;
+
+}
+
+.article_text {
+    width:200px;
+    word-wrap: break-word;
+    align-self:auto;
+}
+
+.article_image > img{
+
+  top: 50%;
+  left: 50%;
+  height:150px;
+  width:auto;
+    border:3px solid #021a40
+  }
+
+.article_text {
+  background-color: green;
+  border-style: solid;
+  border:5px solid #021a40
+  }

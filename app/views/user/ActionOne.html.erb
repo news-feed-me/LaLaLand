@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <%= stylesheet_link_tag 'user' %>
+</head>
 <div class="header">
-  this is header, it must contain navigation bar and all of the stuff like that.
+  this is header, it must contain navigation bar with links to other parts of the webapp
 
 <div class="articles">
   <% @articles.each do |article| %>

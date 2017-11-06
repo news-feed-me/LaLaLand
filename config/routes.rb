@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   #resources :widgets
   root :to => "user#ActionOne"
 
-  match ':controller(/:action(/:id))', :via => :get
+  match ':controller(/:action(/:id))', :via => [:get, :post]
 
 
 
