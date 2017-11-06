@@ -11,7 +11,6 @@ class Article
     @src = src
     @id = id
     @text = text
-    @category = category
   end
 
   def outputHTML
