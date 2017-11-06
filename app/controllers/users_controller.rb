@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def list
+    @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"]
+    render :layout => nil
+  end
 
 
 
@@ -27,6 +31,7 @@ class UsersController < ApplicationController
   def profile
     @user = User.all
   end
+
 
 
 end

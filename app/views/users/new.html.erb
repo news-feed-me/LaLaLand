@@ -43,6 +43,27 @@
 
     </table>
 
+    <div id="signup_subscription_list">
+      <table>
+        <head> Subscriptions </head>
+
+        <% @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"] %>
+        <% @subs.each do |s| %>
+
+        <tr>
+          <td> <%= entry.label s %> </td>
+          <td> <%= entry.check_box :subscribes %> </td>
+        </tr>
+
+        <% end %>
+
+
+
+
+      </table>
+
+    </div>
+
 
 
     </p>
