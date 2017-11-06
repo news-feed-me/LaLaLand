@@ -1,0 +1,20 @@
+<% @page_title = "Subscriptions" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="sources">
+  <h2>Add Source</h2>
+
+  <%= form_for(:sources, :url => {:action => 'add_sources'}) do |f| %>
+
+    <table summary="Sources form fields">
+      <tr>
+        <th>Source URL</th>
+        <td><%= f.text_field(:url) %></td>
+      </tr>
+    </table>
+    <div class-"form-buttons">
+      <%= submit_tag("Add sources") %>
+    </div>
+  <% end %>
+</div>
