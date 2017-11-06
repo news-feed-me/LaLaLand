@@ -4,24 +4,33 @@
   this is header, it must contain navigation bar and all of the stuff like that.
 
 <div class="articles">
-
-  this output generates articles
+  <% @articles.each do |article| %>
+  <%= raw article.outputHTML %>
+  <%end%>
 </div>
 
 <div class="category">
-  <% i = 0  %>
   <%= form_tag("/user/ActionOne",id: "category_input", method: "get") do %>
     <% @categories.each do |category| %>
       <%= radio_button_tag(:category, category) %>
       <%= label_tag(:category, category) %>
       <p>
     <%end  %>
+    <%= submit_tag("get") %>
   <% end %>
-  <%= submit_tag("G", id: "category_input") %>
 </div>
 
 <div class="sources">
-  this contains sources
+  <p> This is list of sources. They correspond to list of articles;
+  <%= form_tag("/user/ActionOne",id: "articles_input", method: "get") do %>
+    <% @sources.each do |source| %>
+
+    <%= check_box_tag("sources[]", source ) %>
+    <%= label_tag(source) %>
+      <p>
+    <%end  %>
+    <%= submit_tag("get") %>
+  <% end %>
 </div>
 
 <div class="footer">

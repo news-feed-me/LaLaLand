@@ -32,6 +32,10 @@ gem 'spring',        group: :development
 
 gem 'puma'
 
+# Added by Misha to make API calls to the server;
+
+gem 'httparty'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
