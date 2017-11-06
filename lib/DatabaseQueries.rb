@@ -1,6 +1,0 @@
-module DatabaseQueries
-
-
-
-
-end

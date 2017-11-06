@@ -1,21 +1,25 @@
 Rails.application.routes.draw do
-  #resources :widgets
-  root :to => "user#ActionOne"
+  #get 'metadata/index'
 
-  match ':controller(/:action(/:id))', :via => [:get, :post]
+  #get 'admin/index'
+  #get 'admin/show'
+  #get 'admin/edit'
+  #get 'admin/new'
+  #get 'admin/delete'
 
+  resources :widgets
 
+  # API_Key
+  # 43a167ad5e5943c386c72685062b81c8
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-
   #root 'welcome#index'
-  #resources :UserController
-  #get 'UserController/ActionOne'
-  #root 'UserController#ActionOne'
 
+  # Default route
+  match ':controller(/:action(/:id(.:format)))', :via => [:get, :post]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
