@@ -15,9 +15,11 @@ class Article
 
   def outputHTML
         htmlOutput = "<a href=\"#{@href}\" id=\"#{@id}\">\n"+
+        "<div class=\"article\">"+
         "   <div class=\"article_image\">\n"+
-        "     <img src=\"#{@src}\">\n <div class=\"article_text\">"+
-                "#{@text}\n </div>   </div> </a>"
+        "     <img src=\"#{@src}\">\n </div>
+        <div class=\"article_text\">"+
+                "#{@text}\n </div></div> </a>"
         return htmlOutput
   end
 end

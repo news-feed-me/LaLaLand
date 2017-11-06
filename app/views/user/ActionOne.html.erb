@@ -3,41 +3,53 @@
 <head>
   <%= stylesheet_link_tag 'user' %>
 </head>
-<div class="header">
-  this is header, it must contain navigation bar with links to other parts of the webapp
+<body>
+  THIS IS BODY
+  <p>
 
-<div class="articles">
-  <% @articles.each do |article| %>
-  <%= raw article.outputHTML %>
-  <%end%>
-</div>
+  <div class="header">
+    this is header, it must contain navigation bar with links to other parts of the webapp
+  </div>
 
-<div class="category">
-  <%= form_tag("/user/ActionOne",id: "category_input", method: "get") do %>
-    <% @categories.each do |category| %>
-      <%= radio_button_tag(:category, category) %>
-      <%= label_tag(:category, category) %>
-      <p>
-    <%end  %>
-    <%= submit_tag("get") %>
-  <% end %>
-</div>
+  <div class="content">
 
-<div class="sources">
-  <p> This is list of sources. They correspond to list of articles;
-  <%= form_tag("/user/ActionOne",id: "articles_input", method: "get") do %>
-    <% @sources.each do |source| %>
 
-    <%= check_box_tag("sources[]", source ) %>
-    <%= label_tag(source) %>
-      <p>
-    <%end  %>
-    <%= submit_tag("get") %>
-  <% end %>
-</div>
+    <div class = "filter">
+      This is filter
+      <div class="category">
+        <%= form_tag("/user/ActionOne",id: "category_input", method: "get") do %>
+          <% @categories.each do |category| %>
+            <%= radio_button_tag(:category, category) %>
+            <%= label_tag(:category, category) %>
+            <p>
+          <%end  %>
+          <%= submit_tag("get") %>
+        <% end %>
+      </div>
 
-<div class="footer">
-  this is footer
-</div>
+      <div class="sources">
+        <p> This is list of sources. They correspond to list of articles;
+        <%= form_tag("/user/ActionOne",id: "articles_input", method: "get") do %>
+          <% @sources.each do |source| %>
+
+          <%= check_box_tag("sources[]", source ) %>
+          <%= label_tag(source) %>
+            <p>
+          <%end  %>
+          <%= submit_tag("get") %>
+        <% end %>
+      </div>
+    </div>
+    <div class="articles">
+      <% @articles.each do |article| %>
+      <%= raw article.outputHTML %>
+      <%end%>
+    </div>
+  </div>
+
+  <div class="footer">
+    this is footer
+  </div>
+</body>
 
 </html>

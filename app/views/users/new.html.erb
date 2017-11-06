@@ -47,9 +47,9 @@
       <table>
         <head> Subscriptions </head>
 
-        <% @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"] %>
-
-          <% @subs.each do |ssub| %>
+        <!-- <% @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"] %>
+ -->
+          <% @subs1.each do |ssub| %>
           <%= check_box_tag("sources[]", ssub ) %>
           <%= label_tag(ssub) %>
           <p>

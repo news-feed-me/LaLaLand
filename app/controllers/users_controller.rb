@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   def new
     @sources = Array.new
     @user = User.new
+    # add the complete list of sources;
+    # probably the easier way would be have it stored in database somewhere
+    # instead of making call to API;
+    @subs1 = getSources
   end
   require 'NewsAPI_Source'
   include NewsAPI_Source
@@ -20,6 +24,7 @@ class UsersController < ApplicationController
         else
           render action: "new"
         end
+
       end
 
       redirect_to @user, notice: 'User was successfully created'
@@ -29,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def list
-    @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"]
+    @subs = getSources
     render :layout => nil
   end
 

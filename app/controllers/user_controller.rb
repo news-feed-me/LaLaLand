@@ -30,9 +30,15 @@ class UserController < ApplicationController
   def ActionOne
     @apiParser = ApiParser.new(session[:user_name])
     @subscriptions = @apiParser.getSubscriptions
-
     @categories = getCategories
-    @sources = getSources
+    @sources = Array.new
+
+    @subscriptions.each do |subscription|
+      @sources.push(subscription.source_id)
+    end
+
+    puts @sources
+
     @articles = Array.new
 
     if params.has_key?('category')
@@ -76,17 +82,7 @@ class UserController < ApplicationController
       @articles.push(Article.new(href,imgsrc,article_id,text))
 
     end
-    puts "printing param keys2"
 
-
-    # function returns list of articles id's by category;
-    print getSourcesByCategory('business').class
-
-
-    #make api call. get result;
-
-    @categories = getCategories
-    @sources = getSources
 
   end
 
