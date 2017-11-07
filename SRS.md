@@ -29,14 +29,12 @@ While traditional news feed sites target avid news readers, our web app simplifi
 
 ## User Stories
 
-As a computer science student who is very passionate about block-chain technology, I would like to keep myself updated about new developments in the field. I can imagine using this application to have access to the aggregated information.
+As an Admin, I would like to add/edit/delete news sources in the database, so that I can extend/update the the application functionality.
 
-As a CMPT276 student I rarely have time to scroll and look for new articles that meet my specific needs, therefore with FeedMe I would be able to quickly search for specific articles with specific keywords
+As a user of FeedMe, I would like to create a user profile and login to access my news subscriptions and get regular news updates.
 
-As a cricket fan I would use FeedMe to search for relevant articles about specific cricket matches, scorecard updates, analysis reports and highlights.
+As a user of FeedMe, I would like to access information from a variety of news outlets and get brief summary of news to save time.
 
-As an individual running an ecommerce business in men’s style, I would utilize FeedMe’s aggregate feature to facilitate my research on the current and latest style trends in the market and save me a considerable amount of time.
-
-As an avid blogger, FeedMe would allow me to openly discuss news articles that are of interest to me with other readers who may share the same interests.
+As a user of FeedMe, I would like to access news sources by categories.
 
 ## User Interface
