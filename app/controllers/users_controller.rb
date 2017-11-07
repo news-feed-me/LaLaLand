@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   layout false
-  
+
   before_action :check_log_in, :except => [:create, :new]
   def new
     @sources = Array.new

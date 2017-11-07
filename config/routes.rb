@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # API_Key
   # 43a167ad5e5943c386c72685062b81c8
-
+  root 'admin#index'
   get 'access/login'
 
   get 'users/new'
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'admin#index'
+
 
   # Default route
   match ':controller(/:action(/:id(.:format)))', :via => [:get, :post]
