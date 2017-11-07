@@ -1,12 +1,12 @@
 <h1>Login</h1>
 
-<div id="loginBox"
+<div id="loginBox">
 <%= form_tag(:action => 'attempt_login') do %>
 	<%= label_tag(:user_name) %>
 	<%= text_field_tag(:user_name) %>
 
 	<%= label_tag(:password) %>
-	<%= password_field_tag(:password) %>
+	<%= text_field_tag(:password) %>
 
 	<%= submit_tag("Log in") %>
 </div>
