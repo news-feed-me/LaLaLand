@@ -1,4 +1,5 @@
 class AccessController < ApplicationController
+  layout false
   #before_action should be put
   before_action :check_log_in, :except => [:login, :attempt_login, :logout]
 
