@@ -24,6 +24,7 @@
     <div class = "filter">
       This is filter
       <div class="category">
+        categories are not fully working
         <%= form_tag("/user/ActionOne",id: "category_input", method: "get") do %>
           <% @categories.each do |category| %>
             <%= radio_button_tag(:category, category) %>

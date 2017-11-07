@@ -1,3 +1,6 @@
+<head>
+  <%= stylesheet_link_tag 'users' %>
+</head>
 <div id="newUsers">
 
   <h2 id="backButton"> <%= link_to 'Back', home_path %> </h2>
@@ -33,7 +36,7 @@
 
       <tr>
         <td> <%= entry.label :password %> </td>
-        <td> <%= entry.text_field :password %> </td>
+        <td> <%= entry.password_field :password %> </td>
       </tr>
 
       <tr>
