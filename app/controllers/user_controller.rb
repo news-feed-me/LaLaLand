@@ -59,8 +59,8 @@ class UserController < ApplicationController
       number_of_sources = params['sources'].length
       puts "number of sources #{number_of_sources}"
 
-      @subscriptions.each do |source|
-        articles = getNewsBySourceID(source.source_id)
+      params['sources'].each do |source|
+        articles = getNewsBySourceID(source)
         i = 0
         articles.each do |article|
 
@@ -78,10 +78,25 @@ class UserController < ApplicationController
       href = "./User/ActionOne"
       imgsrc = "http://www.gettyimages.ca/gi-resources/images/Embed/new/embed2.jpg"
       article_id = 1
-      text = "Welcome to newsfeed me, Please select category or sources"
+      text = "Welcome to newsfeed me, Please select articles you want to view"
       @articles.push(Article.new(href,imgsrc,article_id,text))
       @articles.push(Article.new(href,imgsrc,article_id,text))
       @articles.push(Article.new(href,imgsrc,article_id,text))
+
+      @subscriptions.each do |source|
+        articles = getNewsBySourceID(source.source_id)
+        i = 0
+        articles.each do |article|
+
+          href = article['url']
+          imgsrc = article['urlToImage']
+          id = i
+          text = article['title'] <<  article['description']
+          puts text
+
+          @articles.push(Article.new(href,imgsrc,id,text))
+        end
+      end
 
     end
 
