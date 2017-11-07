@@ -80,6 +80,8 @@ class UserController < ApplicationController
       article_id = 1
       text = "Welcome to newsfeed me, Please select category or sources"
       @articles.push(Article.new(href,imgsrc,article_id,text))
+      @articles.push(Article.new(href,imgsrc,article_id,text))
+      @articles.push(Article.new(href,imgsrc,article_id,text))
 
     end
 
