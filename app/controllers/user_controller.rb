@@ -30,14 +30,15 @@ class UserController < ApplicationController
   def ActionOne
     @apiParser = ApiParser.new(session[:user_name])
     @subscriptions = @apiParser.getSubscriptions
+
     @categories = getCategories
+
     @sources = Array.new
 
     @subscriptions.each do |subscription|
       @sources.push(subscription.source_id)
     end
 
-    puts @sources
 
     @articles = Array.new
 
@@ -67,7 +68,7 @@ class UserController < ApplicationController
           href = article['url']
           imgsrc = article['urlToImage']
           id = i
-          text = article['title'] <<  article['description']
+          text = article['title'] + article['description']
           puts text
 
           @articles.push(Article.new(href,imgsrc,id,text))
@@ -91,7 +92,7 @@ class UserController < ApplicationController
           href = article['url']
           imgsrc = article['urlToImage']
           id = i
-          text = article['title'] <<  article['description']
+          text = article['title']
           puts text
 
           @articles.push(Article.new(href,imgsrc,id,text))
