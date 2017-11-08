@@ -9,5 +9,6 @@ class SubscribesController < ApplicationController
       redirect_to @subscribe
     else
       render action: link_to(:controller => 'users', :action =>'new')
+    end
   end
 end
