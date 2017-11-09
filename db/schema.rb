@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20171104010513) do
   create_table "users", primary_key: "user_id", force: :cascade do |t|
     t.string   "first_name",      limit: 255
     t.string   "last_name",       limit: 255
-    t.string   "username",        limit: 255, null: false
+    t.string   "user_name",       limit: 255, null: false
     t.string   "email",           limit: 255
     t.date     "birth_date"
     t.string   "country",         limit: 255
