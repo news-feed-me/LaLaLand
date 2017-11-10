@@ -1,13 +1,24 @@
-<h1>Login</h1>
+<head>
+	<%= stylesheet_link_tag 'access' %>
+</head>
+
+<h1 id="login">Login</h1>
 
 <div id="loginBox">
-<%= form_tag(:action => 'attempt_login') do %>
-	<%= label_tag(:user_name) %>
-	<%= text_field_tag(:user_name) %>
+	<table>
+		<%= form_tag(:action => 'attempt_login') do %>
+			<tr>
+				<td> <%= label_tag(:user_name) %> </td>
+				<td> <%= text_field_tag(:user_name) %> </td>
+			</tr>
+			<tr>
+				<td> <%= label_tag(:password) %> </td>
+				<td> <%= text_field_tag(:password) %> </td>
+			</tr>
+			<tr>
+				<td> <%= submit_tag("Log in") %> </td>
+			<tr>
+		<% end %>
+	</table>
 
-	<%= label_tag(:password) %>
-	<%= text_field_tag(:password) %>
-
-	<%= submit_tag("Log in") %>
 </div>
-<% end %>
