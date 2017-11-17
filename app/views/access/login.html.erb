@@ -3,7 +3,6 @@
 </head>
 
 <h1 id="login">Login</h1>
-<%= link_to 'Back', home_path %>
 <div id="loginBox">
 	<table>
 		<%= form_tag(:action => 'attempt_login') do %>
@@ -13,12 +12,14 @@
 			</tr>
 			<tr>
 				<td> <%= label_tag(:password) %> </td>
-				<td> <%= text_field_tag(:password) %> </td>
+				<td> <%= password_field_tag(:password) %> </td>
 			</tr>
 			<tr>
 				<td> <%= submit_tag("Log in") %> </td>
 			<tr>
 		<% end %>
 	</table>
+
+	<%= link_to 'Sign up', signup_path %>
 
 </div>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # API_Key
   # 43a167ad5e5943c386c72685062b81c8
-  root 'welcome#index'
+  root 'access#login'
   get 'access/login'
 
   get 'users/new'
