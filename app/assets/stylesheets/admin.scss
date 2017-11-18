@@ -1,7 +1,18 @@
 /* Admin Stylesheet */
 
-/* Structur */
+/* Structure */
+body{
+  width:100%;
+  border-style: solid;
+}
+
+#main {
+  width: 100%;
+  border: 1px solid black;
+}
+
 #content {
+  border: 1px solid green;
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -85,6 +96,8 @@ a.action:hover {
 }
 
 .index table {
+  text-align: center;
+  white-space: nowrap;
   clear: both;
   width: 100%;
 }
