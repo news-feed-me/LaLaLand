@@ -3,9 +3,16 @@ ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
+gem 'jquery-rails'
 # Use postgresql as the database for Active Record
-gem 'pg', '0.20.0'
-gem 'rails_12factor', group: :production
+
+group :production do
+  gem 'pg', '0.20.0'
+  gem 'haml'
+  gem 'rails_12factor'
+end
+#gem 'rails_12factor', group: :production
+#gem 'haml', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -14,6 +21,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+
+gem 'simple_form'
+#gem 'rails-footnotes', '>= 3.7.9' :group => :development
+gem 'bootstrap-sass', '~> 2.3.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -28,9 +39,13 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
+
+# Added by Misha to make API calls to the server;
+
+gem 'httparty'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

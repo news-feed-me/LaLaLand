@@ -1,12 +1,28 @@
 Rails.application.routes.draw do
-  resources :widgets
+  # API_Key
+  # 43a167ad5e5943c386c72685062b81c8
+  root 'access#login'
+  get 'access/login'
 
+  get 'users/new'
+
+  get "users/new", to: "users#new", as: :signup
+  get "users/login", to: "access#login", as: :login
+  get "welcome/index", to: "welcome#index", as: :home
+  get "access/logout", to: "access#logout", as: :logout
+  get 'access/index', to: "access#index", as: :access_index
+
+  resources :widgets
+  resources :users
+  resources :subscribes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
 
-  root 'welcome#index'
+
+  # Default route
+  match ':controller(/:action(/:id(.:format)))', :via => [:get, :post]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

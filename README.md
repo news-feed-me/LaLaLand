@@ -3,10 +3,12 @@
 ## Authors
 
 Asim Himani  
-Akio Suzuki <br />
+Akio Christopher Suzuki - asuzuki@sfu.ca <br />
 Cora Xiaotong <br />
 Dan Tang - dltang@sfu.ca <br />
 Misha Chavarha
+
+
 
 
 ## Abstract:

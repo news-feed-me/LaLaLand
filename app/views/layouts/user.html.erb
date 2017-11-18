@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FeedMe | <%= @page_title || @user_name %></title>
+    <link rel="stylesheet" href="metadata.scss">
+  </head>
+  <body>
+    <div id="header">
+      <h1>FeedMe</h1>
+      <!-- <%= image_tag("/assets/images/global-franchise-blue-header") %> -->
+    </div>
+    <div id="main">
+      <div id="content">
+        <!-- before yield -->
+        <%= yield %>
+        <!-- after yield -->
+      </div>
+    </div>
+    <div id="footer">
+      <p id="copyright">&copy; FeedMe</p>
+    </div>
+  </body>
+</html>

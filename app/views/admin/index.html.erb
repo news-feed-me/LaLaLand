@@ -1,0 +1,33 @@
+<% @page_title = "Subscriptions" %>
+
+<div class="subscriptions index">
+  <h2>Subscriptions</h2>
+
+  <%= link_to("Add New Subscription", {:action => 'new'}, :class => 'action new') %>
+  <br /><br />
+  <%= link_to("Populate Sources", {:action => 'add'}, :class => 'action add') %>
+
+  <table class="listing" summary="Subscription list">
+    <tr class="header">
+      <th>&nbsp;</th>
+      <th>Name</th>
+      <th>URL</th>
+      <th>Source</th>
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+    <% @subscriptions.each do |subscription| %>
+    <tr>
+      <td><%= subscription.name %></td>
+      <td><%= subscription.url %></td>
+      <td><%= subscription.source_id %></td>
+      <td><%= subscription.category %></td>
+      <td class="actions">
+        <%= link_to("Show", {:action => 'show', :id => subscription.id}, :class => 'action show') %>
+        <%= link_to("Edit", {:action => 'edit', :id => subscription.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => subscription.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
