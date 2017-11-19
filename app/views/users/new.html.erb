@@ -7,6 +7,8 @@
 
 
   <%= simple_form_for @user do |entry| %>
+    <%= render 'shared/error_messages' %>
+
 
   <div id="usersSignupTable">
 
@@ -15,48 +17,56 @@
     <p> All fields are required for signup. </p>
     <table>
       <tr>
-        <td> <%= entry.label :first_name %> </td>
-        <td> <%= entry.text_field :first_name %> </td>
+        <td> <%= entry.label :first_name, "First Name:" %> </td>
+        <td> <%= entry.text_field :first_name, class: 'form-control' %> </td>
       </tr>
 
       <tr>
-        <td> <%= entry.label :last_name %> </td>
-        <td> <%= entry.text_field :last_name %> </td>
+        <td> <%= entry.label :last_name, "Last Name:" %> </td>
+        <td> <%= entry.text_field :last_name, class: 'form-control' %> </td>
       </tr>
 
       <tr>
-        <td> <%= entry.label :user_name %> </td>
-        <td> <%= entry.text_field :user_name %> </td>
+        <td> <%= entry.label :user_name, "Username:" %> </td>
+        <td> <%= entry.text_field :user_name, class: 'form-control' %> </td>
       </tr>
 
       <tr>
-        <td> <%= entry.label :email %> </td>
-        <td> <%= entry.text_field :email %> </td>
+        <td> <%= entry.label :email, "Email:" %> </td>
+        <td> <%= entry.text_field :email, class: 'form-control' %> </td>
       </tr>
 
       <tr>
-        <td> <%= entry.label :password %> </td>
-        <td> <%= entry.text_field :password %> </td>
+        <td> <%= entry.label :password,"Password:" %> </td>
+        <td> <%= entry.password_field :password, class: 'form-control' %> </td>
       </tr>
 
       <tr>
-        <td> <%= entry.label :birth_date %> </td>
-        <td> <%= entry.text_field :birth_date %> </td>
+        <td> <%= entry.label :password_confirmation, "Confirm Password:" %> </td>
+        <td> <%= entry.password_field :password_confirmation, class: 'form-control'%> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :birth_date, "Date of Birth:" %> </td>
+        <td> <%= entry.date_field :birth_date, class: 'form-control' %> </td>
       </tr>
 
     </table>
 
     <div id="signup_subscription_list">
       <table>
-        <head> Subscriptions </head>
+        <head> SUBSCRIPTIONS: </head>
+        <br>
+        <br>
 
         <!-- <% @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"] %>
  -->
-          <% @subs1.each do |ssub| %>
-          <%= check_box_tag("sources[]", ssub ) %>
-          <%= label_tag(ssub) %>
-          <p>
-            <%end  %>
+
+            <% @subs1.each do |ssub| %>
+            <%= check_box_tag("sources[]", ssub ) %>
+            <%= label_tag(ssub) %>
+            <p>
+              <% end  %>
 
       </table>
 
@@ -65,8 +75,7 @@
     </p>
 
     <p>
-      <%= submit_tag("submit") %>
-      <!--<%= entry.submit %>-->
+      <%= submit_tag("Create my account") %>
     </p>
   <% end %>
 

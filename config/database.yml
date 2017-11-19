@@ -16,12 +16,19 @@
 #
 default: &default
   adapter: postgresql
+
+  ##encoding: unicode
+  #username: postgres
   encoding: unicode
+<<<<<<< HEAD
   username: postgres
   password: theLocalDatabasePassw0rd!
+=======
+#  username: postgres
+
+>>>>>>> origin/master
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
 
 development:
   <<: *default
@@ -83,5 +90,5 @@ test:
 production:
   <<: *default
   database: postgresql-perpendicular-98084
-  username: shrouded-ravine-26332
-  password: <%= ENV['shrouded-ravine-26332_DATABASE_PASSW0RD'] %>
+  #username: shrouded-ravine-26332
+  #password: <%= ENV['shrouded-ravine-26332_DATABASE_PASSW0RD'] %>
