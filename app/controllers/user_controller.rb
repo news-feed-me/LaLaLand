@@ -14,7 +14,7 @@ class UserController < ApplicationController
     # Variables used by the view to display articles
     @apiParser = ApiParser.new(session[:user_name])
     @user_subscriptions = @apiParser.getSubscriptions
-    @categories = getCategories
+    @categories = @apiParser.getCategories
     @sources = Array.new
     @articles = Array.new
 
@@ -24,10 +24,15 @@ class UserController < ApplicationController
 
     # Prepare Articles by Category
     elsif params.has_key?('category')
-      subscriptions = @apiParser.getSubscriptionsByCategory(params['category'])
-
-      subscriptions.each do |subscription|
-        prepareArticlesBySource(subscription.source_id)
+      # subscriptions = @apiParser.getSubscriptionsByCategory(params['category'])
+      #
+      # subscriptions.each do |subscription|
+      #   prepareArticlesBySource(subscription.source_id)
+      # end
+      @user_subscriptions.each do |subscription|
+        if params['category'].include? subscription.category
+          prepareArticlesBySource(subscription.source_id)
+        end
       end
 
     # Prepare Articles by sources
@@ -58,7 +63,10 @@ class UserController < ApplicationController
       href = article['url']
       imgsrc = article['urlToImage']
       id = i
-      text = article['title'] + article['description']
+      text = article['title']
+      if article.has_key?('description')
+        text.concat(article['description'].to_s)
+      end
       @articles.push(Article.new(href,imgsrc,id,text))
     end
   end

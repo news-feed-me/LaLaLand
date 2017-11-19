@@ -43,7 +43,7 @@
       <div class="sources">
         <p> This is list of sources. They correspond to list of articles;
         <%= form_tag("/user/ActionOne",id: "articles_input", method: "get") do %>
-          <% @subscriptions.each do |subscription| %>
+          <% @user_subscriptions.each do |subscription| %>
 
           <%= check_box_tag("sources[]", subscription.name) %>
           <%= label_tag(subscription.name) %>

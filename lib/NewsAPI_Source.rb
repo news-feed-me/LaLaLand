@@ -17,13 +17,6 @@ module NewsAPI_Source
     return  id_nameHash
   end
 
-  # () -> [Categories]
-  def getCategories
-    
-    categories = [ 'business', 'entertainment', 'gaming', 'general', 'music', 'politics', 'science-and-nature', 'sport', 'technology']
-    return categories
-  end
-
   #() -> [Sources]
   def getSources
     idArray = Array.new

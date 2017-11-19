@@ -17,7 +17,8 @@ class UserController
     end
 
     def getCategories
-      categories = Subscription.categories.uniq.pluck(:category)
+      categories = Subscription.uniq.pluck(:category)
+      return categories
     end
 
     def getSubscriptionsByCategory(category)
