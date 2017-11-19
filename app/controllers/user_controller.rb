@@ -1,6 +1,6 @@
 # if you want to use it in the views we need to add character @
 class UserController < ApplicationController
-  layout false
+  layout 'user'
 
   require 'NewsAPI_Source'
   require 'NewsAPI_Article'
@@ -9,10 +9,15 @@ class UserController < ApplicationController
   include NewsAPI_Source
   include NewsAPI_Article
 
+  def index
+    redirect_to(:action => 'display')
+  end
+
   # Prepare Articles to be rendered by the view.
-  def ActionOne
+  def display
     # Variables used by the view to display articles
-    @apiParser = ApiParser.new(session[:user_name])
+    @user_name = session[:user_name]
+    @apiParser = ApiParser.new(@user_name)
     @user_subscriptions = @apiParser.getSubscriptions
     @categories = @apiParser.getCategories
     @sources = Array.new
