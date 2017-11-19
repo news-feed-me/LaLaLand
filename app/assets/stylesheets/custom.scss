@@ -6,19 +6,12 @@
     margin: 0 0 30px 0;
   }
 }
-<<<<<<< HEAD
-@import 'bootstrap';
-=======
-
->>>>>>> 2ba6c1825fd0eacb8136f7c7b9164a5a959caece
 .field_with_errors{
   @extend .has-error !optional;
     .form-control
     {
-<<<<<<< HEAD
+
       color: red;
-=======
-      color: $state-danger-text;
->>>>>>> 2ba6c1825fd0eacb8136f7c7b9164a5a959caece
+
     }
 }
