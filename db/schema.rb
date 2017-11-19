@@ -28,11 +28,19 @@ ActiveRecord::Schema.define(version: 20171104010513) do
 
   create_table "subscriptions", primary_key: "subscription_id", force: :cascade do |t|
     t.string   "name",       limit: 255
+<<<<<<< HEAD
     t.string   "url"
     t.string   "source_id"
     t.string   "category",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+=======
+-    t.string   "url"
+-    t.string   "source_id"
+-    t.string   "category",   limit: 255
+-    t.datetime "created_at"
+-    t.datetime "updated_at"
+>>>>>>> 20d7357e59b1a221dd872777313d3b4de93966a6
   end
 
   create_table "users", primary_key: "user_id", force: :cascade do |t|

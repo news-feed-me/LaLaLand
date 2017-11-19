@@ -7,7 +7,10 @@
 
 
   <%= simple_form_for @user do |entry| %>
+<<<<<<< HEAD
     <%= render 'shared/error_messages' %>
+=======
+>>>>>>> 20d7357e59b1a221dd872777313d3b4de93966a6
 
   <div id="usersSignupTable">
 
@@ -16,6 +19,7 @@
     <p> All fields are required for signup. </p>
     <table>
       <tr>
+<<<<<<< HEAD
         <td> <%= entry.label :first_name, "First Name:" %> </td>
         <td> <%= entry.text_field :first_name, class: 'form-control' %> </td>
       </tr>
@@ -48,12 +52,42 @@
       <tr>
         <td> <%= entry.label :birth_date, "Date of Birth:" %> </td>
         <td> <%= entry.date_field :birth_date, class: 'form-control' %> </td>
+=======
+        <td> <%= entry.label :first_name %> </td>
+        <td> <%= entry.text_field :first_name %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :last_name %> </td>
+        <td> <%= entry.text_field :last_name %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :user_name %> </td>
+        <td> <%= entry.text_field :user_name %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :email %> </td>
+        <td> <%= entry.text_field :email %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :password %> </td>
+        <td> <%= entry.text_field :password %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :birth_date %> </td>
+        <td> <%= entry.text_field :birth_date %> </td>
+>>>>>>> 20d7357e59b1a221dd872777313d3b4de93966a6
       </tr>
 
     </table>
 
     <div id="signup_subscription_list">
       <table>
+<<<<<<< HEAD
         <head> SUBSCRIPTIONS: </head>
         <br>
         <br>
@@ -67,6 +101,17 @@
             <p>
               <%end  %>
 
+=======
+        <head> Subscriptions </head>
+
+        <!-- <% @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"] %>
+ -->
+          <% @subs1.each do |ssub| %>
+          <%= check_box_tag("sources[]", ssub ) %>
+          <%= label_tag(ssub) %>
+          <p>
+            <%end  %>
+>>>>>>> 20d7357e59b1a221dd872777313d3b4de93966a6
 
       </table>
 
@@ -75,7 +120,11 @@
     </p>
 
     <p>
+<<<<<<< HEAD
       <%= submit_tag("Create my account") %>
+=======
+      <%= submit_tag("submit") %>
+>>>>>>> 20d7357e59b1a221dd872777313d3b4de93966a6
       <!--<%= entry.submit %>-->
     </p>
   <% end %>
