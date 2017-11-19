@@ -3,7 +3,7 @@ module NewsAPI_Source
   #() -> [(Sources,SourceName)]
   def getIdNameHash
     id_nameHash = Hash.new
-    apiCallSources = HTTParty.get("https://newsapi.org/v1/sources?language=en")
+    apiCallSources = HTTParty.get("https://newsapi.org/v2/sources?language=en")
 
     apiCallSources.parsed_response['sources'].each do |source|
       id = source['id']

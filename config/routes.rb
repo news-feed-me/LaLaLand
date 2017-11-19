@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # API_Key
   # 43a167ad5e5943c386c72685062b81c8
+  # f52e670563fe4fe5b0d06da57eb0bbf6
   root 'access#login'
   get 'access/login'
 

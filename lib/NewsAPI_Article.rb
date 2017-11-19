@@ -3,7 +3,7 @@ module NewsAPI_Article
   include HTTParty
   # source->[article]
   def getNewsBySourceID(sourceID)
-    apiCall= HTTParty.get("https://newsapi.org/v1/articles?source=#{sourceID}&sortBy=top&apiKey=43a167ad5e5943c386c72685062b81c8")
+    apiCall= HTTParty.get("https://newsapi.org/v2/everything?q=#{sourceID}&sortBy=top&apiKey=f52e670563fe4fe5b0d06da57eb0bbf6")
     articles = Array.new
     if(apiCall.parsed_response['status'].eql? 'ok')
       apiCall.parsed_response['articles'].each do |article|
@@ -14,7 +14,7 @@ module NewsAPI_Article
   end
 
   def getExactNumberOfNewsBySourceID(sourceID,numberOfArticles)
-    apiCall= HTTParty.get("https://newsapi.org/v1/articles?source=#{sourceID}&sortBy=top&apiKey=43a167ad5e5943c386c72685062b81c8")
+    apiCall= HTTParty.get("https://newsapi.org/v2/everything?q=#{sourceID}&sortBy=top&apiKey=f52e670563fe4fe5b0d06da57eb0bbf6")
     articles = Array.new
     i = 0
     if(apiCall.parsed_response['status'].eql? 'ok')
