@@ -38,7 +38,10 @@ class UserController
     end
 
     def getSubscriptionsBySearch(name)
-      subscriptions = Subscription.search(name)
+      subscriptions = Subscription.searchName(name)
+      if subscriptions.empty?
+        subscriptions = Subscription.searchCategory(name)
+      end
       return subscriptions
     end
 

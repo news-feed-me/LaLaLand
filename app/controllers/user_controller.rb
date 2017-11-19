@@ -49,7 +49,7 @@ class UserController < ApplicationController
 
       else
         @user_subscriptions.each do |source|
-          prepareArticlesBySource(source)
+          prepareArticlesBySource(source.source_id)
         end
       end
     end
@@ -73,19 +73,10 @@ class UserController < ApplicationController
 
   # Filters articles by search and adds them to the array
   def prepareArticlesBySearch
-    search_result
-    @categories.each do |category|
-      if params[:search] == category then
-        search_result = @apiParser.getSubscriptionsByCategory(category)
-      end
-    end
-
-    if search_result.empty?
-      search_result = @apiParser.getSubscriptionsBySearch(params['search'])
-    end
+    search_result = @apiParser.getSubscriptionsBySearch(params['search'])
 
     search_result.each do |source|
-      prepareArticlesBySource(source)
+      prepareArticlesBySource(source.source_id)
     end
     return search_result
   end
