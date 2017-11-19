@@ -2,6 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#loginSignUpBox{
+  float: right;
+  display: inline;
+  margin-right: 2em;
+  margin-top: 1em;
+  padding: 1em 2em 1em 2em;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+#title{
+  float: left;
+  display: inline;
+  margin-left: 2em;
+}
+
+#topBlock{
+  background: linear-gradient(to right, #33cc33, #009933);
+  padding-bottom: 2em;
+}
+
 #login{
   animation-name: loginPop;
   animation-duration: 3s;
