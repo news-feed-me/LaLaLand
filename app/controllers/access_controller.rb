@@ -3,13 +3,19 @@ class AccessController < ApplicationController
   #before_action should be put
   before_action :check_log_in, :except => [:login, :attempt_login, :logout]
 
+  $found = true
+
+
   def index
   end
 
   def login
+
   end
 
   def attempt_login
+    $found = true
+    #@first_attempt =
   	if params[:user_name].present? && params[:password].present?
   		found_user = User.where(:user_name => params[:user_name]).first
   		if found_user
@@ -21,10 +27,13 @@ class AccessController < ApplicationController
       #save userid & name to sessions
       session[:userid] = authroized_user.id
       session[:user_name] = authroized_user.user_name
+      $found = true
   		#redirect_to user's menu
   		redirect_to(:controller => 'User', :action => 'ActionOne')
   	else
+      $found = false
   		redirect_to(:action => 'login')
+      #render :action => 'login'
   	end
   end
 
