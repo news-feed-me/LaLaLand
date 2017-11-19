@@ -1,11 +1,7 @@
 # if you want to use it in the views we need to add character @
 class UserController < ApplicationController
   layout false
-  #require 'DesignPatterns'
-  #require 'NewsAPI'
-  #require 'NewsAPI2'
-  #include DesignPatterns
-  require 'Article'
+
   require 'NewsAPI_Source'
   require 'NewsAPI_Article'
 
@@ -13,97 +9,76 @@ class UserController < ApplicationController
   include NewsAPI_Source
   include NewsAPI_Article
 
-
-  def index
-    @categories = getCategories
-    @sources = getSources
-
-  end
-
-  def show
-
-  end
-
-  # this is just custom made action for testing purposes
-  # the code included here can and should be refactored into a new
-  # action/s.
+  # Prepare Articles to be rendered by the view.
   def ActionOne
+    # Variables used by the view to display articles
     @apiParser = ApiParser.new(session[:user_name])
-    @subscriptions = @apiParser.getSubscriptions
-
+    @user_subscriptions = @apiParser.getSubscriptions
     @categories = getCategories
-
     @sources = Array.new
-
-    @subscriptions.each do |subscription|
-      @sources.push(subscription.source_id)
-    end
-
-
     @articles = Array.new
 
-    if params.has_key?('category')
-      puts "category form detected. the category is: #{params['category']}"
-      idsByCategory = getSourcesByCategory(params['category'])
-      newsArticles = getNewsBySourceIDs(idsByCategory,5)
-      i = 0
-      newsArticles.each do |article|
-        href = article['url']
-        imgsrc = article['urlToImage']
-        text = article['title']
-        @articles.push(Article.new(href,imgsrc,id,text))
+    # Prepare Articles by Search
+    if params.has_key?('search')
+      prepareArticlesBySearch
+
+    # Prepare Articles by Category
+    elsif params.has_key?('category')
+      subscriptions = @apiParser.getSubscriptionsByCategory(params['category'])
+
+      subscriptions.each do |subscription|
+        prepareArticlesBySource(subscription.source_id)
       end
 
-    elsif !params || params.has_key?('sources')
+    # Prepare Articles by sources
+    elsif params.has_key?('sources')
+      subscriptions = @apiParser.getSubscriptionsByName(params['sources'])
 
-      puts "sources category found, printing list of categories"
-      number_of_sources = params['sources'].length
-      puts "number of sources #{number_of_sources}"
-
-      params['sources'].each do |source|
-        articles = getNewsBySourceID(source)
-        i = 0
-        articles.each do |article|
-
-          href = article['url']
-          imgsrc = article['urlToImage']
-          id = i
-          text = article['title'] + article['description']
-          puts text
-
-          @articles.push(Article.new(href,imgsrc,id,text))
-        end
+      subscriptions.each do |subscription|
+        prepareArticlesBySource(subscription.source_id)
       end
 
+    # Prepare Articles by User Subscriptions
     else
-      href = "./User/ActionOne"
-      imgsrc = "http://www.gettyimages.ca/gi-resources/images/Embed/new/embed2.jpg"
-      article_id = 1
-      text = "Welcome to newsfeed me, Please select articles you want to view"
-      @articles.push(Article.new(href,imgsrc,article_id,text))
-      @articles.push(Article.new(href,imgsrc,article_id,text))
-      @articles.push(Article.new(href,imgsrc,article_id,text))
+      if @user_subscriptions.empty?
 
-      @subscriptions.each do |source|
-        articles = getNewsBySourceID(source.source_id)
-        i = 0
-        articles.each do |article|
-
-          href = article['url']
-          imgsrc = article['urlToImage']
-          id = i
-          text = article['title']
-          puts text
-
-          @articles.push(Article.new(href,imgsrc,id,text))
+      else
+        @user_subscriptions.each do |source|
+          prepareArticlesBySource(source)
         end
       end
     end
-
-
   end
 
-  def search_results
-    
+  # Filters articles by sources and adds them to the array
+  def prepareArticlesBySource(source)
+    articles = getNewsBySourceID(source)
+    i = 0
+    articles.each do |article|
+      href = article['url']
+      imgsrc = article['urlToImage']
+      id = i
+      text = article['title'] + article['description']
+      @articles.push(Article.new(href,imgsrc,id,text))
+    end
+  end
+
+  # Filters articles by search and adds them to the array
+  def prepareArticlesBySearch
+    search_result
+    @categories.each do |category|
+      if params[:search] == category then
+        search_result = @apiParser.getSubscriptionsByCategory(category)
+      end
+    end
+
+    if search_result.empty?
+      search_result = @apiParser.getSubscriptionsBySearch(params['search'])
+    end
+
+    search_result.each do |source|
+      prepareArticlesBySource(source)
+    end
+    return search_result
   end
 end

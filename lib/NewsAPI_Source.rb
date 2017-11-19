@@ -19,6 +19,7 @@ module NewsAPI_Source
 
   # () -> [Categories]
   def getCategories
+    
     categories = [ 'business', 'entertainment', 'gaming', 'general', 'music', 'politics', 'science-and-nature', 'sport', 'technology']
     return categories
   end
@@ -49,10 +50,6 @@ module NewsAPI_Source
         idArray.push(key)
       end
     end
-
     return idArray
-
   end
-
-
 end

@@ -16,6 +16,31 @@ class UserController
       return subscriptions
     end
 
+    def getCategories
+      categories = Subscription.categories.uniq.pluck(:category)
+    end
+
+    def getSubscriptionsByCategory(category)
+      subscriptions = Subscription.where(:category => category)
+      return subscriptions
+    end
+
+    def getSubscriptionsByName(names)
+      subscriptions = Array.new
+      names.each do |name|
+        subscription = Subscription.where(:name => name)
+        subscription.each do |s|
+          subscriptions.push(s)
+        end
+      end
+      return subscriptions
+    end
+
+    def getSubscriptionsBySearch(name)
+      subscriptions = Subscription.search(name)
+      return subscriptions
+    end
+
     private
       def getUser
         return User.find_by_user_name(@userName).id
