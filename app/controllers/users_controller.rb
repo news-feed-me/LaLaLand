@@ -46,10 +46,6 @@ class UsersController < ApplicationController
     render :layout => nil
   end
 
-  def edit
-    @user = User.find(session[:userid])
-  end
-
   def profile_update
     @user = User.find(session[:userid])
     if @user.update_attributes(user_params) and @user.valid?
@@ -59,6 +55,7 @@ class UsersController < ApplicationController
     end
   end
 
+  def subscribes_update
 
 
   private
