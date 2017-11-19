@@ -26,7 +26,7 @@ class AccessController < ApplicationController
       if session[:user_name] == "Administrator"
         redirect_to(:controller => 'Admin', :action => 'index')
       else
-  		  redirect_to(:controller => 'User', :action => 'ActionOne')
+  		  redirect_to(:controller => 'User', :action => 'display')
       end
   	else
   		redirect_to(:action => 'login')
