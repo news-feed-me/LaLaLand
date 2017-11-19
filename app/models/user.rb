@@ -5,7 +5,6 @@ class User < ActiveRecord::Base
   has_many :subscribes
   has_many :subscriptions, :through => :subscribes
 
-<<<<<<< HEAD
   validates_presence_of :first_name, :last_name
 
   validates_presence_of :user_name
@@ -33,6 +32,4 @@ class User < ActiveRecord::Base
 
   #validates_presence_of :subscribes
 
-=======
->>>>>>> 20d7357e59b1a221dd872777313d3b4de93966a6
 end
