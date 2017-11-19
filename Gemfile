@@ -6,10 +6,11 @@ gem 'rails', '4.2.8'
 gem 'jquery-rails'
 # Use postgresql as the database for Active Record
 
+gem 'rails_12factor'
+
 group :production do
   gem 'pg', '0.20.0'
   gem 'haml'
-  gem 'rails_12factor'
 end
 #gem 'rails_12factor', group: :production
 #gem 'haml', group: :production
