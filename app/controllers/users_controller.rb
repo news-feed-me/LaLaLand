@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
       end
 
-        redirect_to @user, notice: 'User was successfully created'
+        redirect_to(:controller => 'Access', :action => 'login')#, notice: 'User was successfully created'
       else
         render action: "new"
       end
