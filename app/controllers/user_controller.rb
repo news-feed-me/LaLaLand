@@ -13,7 +13,7 @@ class UserController < ApplicationController
     redirect_to(:action => 'display')
   end
 
-  
+
 
   # Prepare Articles to be rendered by the view.
   def display
@@ -70,7 +70,7 @@ class UserController < ApplicationController
       href = article['url']
       imgsrc = article['urlToImage']
       id = i
-      text = article['title']
+      text = article['title'] + "\n"
       if article.has_key?('description')
         text.concat(article['description'].to_s)
       end
