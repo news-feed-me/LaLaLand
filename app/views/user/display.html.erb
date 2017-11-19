@@ -1,5 +1,5 @@
 <div class="search_bar">
-  <%= form_tag("/user/ActionOne", :method => "get", id: "search-form") do %>
+  <%= form_tag('/user/display', :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "FeedMe" %>
     <%= submit_tag "Search", :name => nil %>
   <% end %>
@@ -8,7 +8,7 @@
 <div class="content">
   <div class = "filter">
     <div class="category">
-      <%= form_tag("/user/ActionOne",id: "category_input", method: "get") do %>
+      <%= form_tag('/user/display',id: "category_input", method: "get") do %>
         <% @categories.each do |category| %>
           <%= radio_button_tag(:category, category) %>
           <%= label_tag(:category, category) %>
@@ -20,7 +20,7 @@
 
     <div class="sources">
       <p> This is list of sources. They correspond to list of articles;
-      <%= form_tag("/user/ActionOne",id: "articles_input", method: "get") do %>
+      <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
         <% @user_subscriptions.each do |subscription| %>
 
         <%= check_box_tag("sources[]", subscription.name) %>
