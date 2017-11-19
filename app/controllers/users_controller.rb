@@ -48,10 +48,13 @@ class UsersController < ApplicationController
 
   def profile_update
     @user = User.find(session[:userid])
-    if @user.update_attributes(user_params) and @user.valid?
-      flash[:notice] = "Successfully updated!"
+    @user.assign_attributes(user_params)
+    if @user.valid?
+      if @user.save
+        flash[:notice] = "Successfully updated!"
+      end
     else
-      #nothing
+      render action: "profile_update"
     end
   end
 
