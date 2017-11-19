@@ -18,11 +18,16 @@ class AccessController < ApplicationController
   	end
   	# if user is valid, go to user's menu
   	if authroized_user
-      #save userid & name to sessions
+      # save userid & name to sessions
       session[:userid] = authroized_user.id
       session[:user_name] = authroized_user.user_name
-  		#redirect_to user's menu
-  		redirect_to(:controller => 'User', :action => 'ActionOne')
+  		# If regular user, redirect_to User's menu
+      # Else if Admin user redirect_to Admin index
+      if session[:user_name] == "Administrator"
+        redirect_to(:controller => 'Admin', :action => 'index')
+      else
+  		  redirect_to(:controller => 'User', :action => 'ActionOne')
+      end
   	else
   		redirect_to(:action => 'login')
   	end
