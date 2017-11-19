@@ -98,10 +98,12 @@ class UserController < ApplicationController
           @articles.push(Article.new(href,imgsrc,id,text))
         end
       end
-
     end
 
 
   end
 
+  def search_results
+    
+  end
 end
