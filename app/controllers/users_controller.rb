@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   $no_subscriptions = false
 
   def new
+    @page_title = "Signup"
     @user = User.new
     @subs1 = Subscription.all
     render :layout => nil
