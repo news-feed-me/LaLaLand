@@ -73,3 +73,19 @@ tr {
 .form-control {
   color: red;
 }
+
+#menuBar{
+  //border-style: solid;
+  margin-bottom: 1em;
+  margin-left: 8em;
+}
+.menu{
+  display: inline;
+  //margin-left: 1em;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
