@@ -40,7 +40,7 @@ class UsersController < ApplicationController
       else
         $no_subscriptions = false
       end
-     render action: "new", notice: "Signup errors"
+     render action: "new", layout: nil, notice: "Signup errors"
     end
   end
 
