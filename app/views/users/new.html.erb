@@ -2,17 +2,11 @@
   <%= stylesheet_link_tag 'users' %>
 </head>
 <div id="newUsers">
-
   <h2 id="backButton"> <%= link_to 'Back', home_path %> </h2>
-
-
   <%= simple_form_for @user do |entry| %>
     <%= render 'shared/error_messages' %>
-
   <div id="usersSignupTable">
-
     <h3> Sign Up </h3>
-
     <p> All fields are required for signup. </p>
     <table>
       <tr>
@@ -58,29 +52,17 @@
         <p style ="color:red;"> **You must subscribe to atleast one news channel** </p>
         <% end %>
         <head> SUBSCRIPTIONS: </head>
-        <br>
-        <br>
-
-        <!-- <% @subs = ["abc-news-au", "al-jazeera-english", "ars-technica", "associated-press", "the-economist"] %>
- -->
-
-            <% @subs1.each do |ssub| %>
-            <%= check_box_tag("sources[]", ssub ) %>
-            <%= label_tag(ssub) %>
-            <p>
-              <% end  %>
-
-
+        <br \><br \>
+        <% @subs1.each do |ssub| %>
+        <%= check_box_tag("sources[]", ssub.name ) %>
+        <%= label_tag(ssub.name) %>
+        <p>
+        <% end  %>
       </table>
-
     </div>
-
     </p>
-
     <p>
       <%= submit_tag("Create Account") %>
-
     </p>
   <% end %>
-
 </div>
