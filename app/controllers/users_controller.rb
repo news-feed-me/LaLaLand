@@ -17,7 +17,6 @@ class UsersController < ApplicationController
   def create
     @subs1 = Subscription.all
     @user_name = session[:user_name]
-    @subs1 = getSources
     @user = User.new(user_params)
     if @user.valid? and params['sources']
       if @user.save
