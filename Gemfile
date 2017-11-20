@@ -3,14 +3,12 @@ ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
-gem 'jquery-rails'
+
 # Use postgresql as the database for Active Record
-
-gem 'rails_12factor'
-
-group :production do
+group :production, :staging do
   gem 'pg', '0.20.0'
   gem 'haml'
+  gem 'rails_12factor'
 end
 #gem 'rails_12factor', group: :production
 #gem 'haml', group: :production
@@ -45,7 +43,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'puma'
 
 # Added by Misha to make API calls to the server;
-
 gem 'httparty'
 
 # Use Capistrano for deployment
