@@ -53,14 +53,10 @@ class UsersController < ApplicationController
     render :layout => nil
   end
 
-
-
-
   private
     def user_params
       params.require(:user).permit(:first_name, :last_name, :user_name, :email, :birth_date,
         :password, :country, :profile_picture, :password_digest, :password_confirmation)
-
     end
 
   def profile

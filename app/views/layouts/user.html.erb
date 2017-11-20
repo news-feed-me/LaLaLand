@@ -20,16 +20,66 @@
           <% end %>
         </div>
       </div>
-    </div>
-    <div id="main">
-      <div id="content">
-        <!-- before yield -->
-        <%= yield %>
-        <!-- after yield -->
+      <div id="main">
+        <div id="content">
+          <!-- before yield -->
+          <%= yield %>
+          <!-- after yield -->
+        </div>
+      </div>
+      <div id="footer">
+        <p id="copyright">&copy; FeedMe</p>
       </div>
     </div>
-    <div id="footer">
-      <p id="copyright">&copy; FeedMe</p>
-    </div>
+
   </body>
+  <style>
+    #header{
+      background-color: white;
+    }
+    #mainBlock{
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      border-color: black;
+      border-style: solid;
+      background-color: white;
+      border-width: 2px;
+      box-shadow: 10px 10px 10px grey;
+    }
+    #button1:hover{
+      background-color: #ff5050;
+    }
+    #button2:hover{
+      background-color: #ff5050;
+    }
+    #button3:hover{
+      background-color: #ff5050;
+    }
+    #button4:hover{
+      background-color: #ff5050;
+    }
+    #button5:hover{
+      background-color: #ff5050;
+    }
+    .navigation_link{
+      padding-left: 3em;
+      background-color: rgb(51, 204, 51);
+      border-width: 1px;
+    }
+    .menu{
+      color: white;
+      text-decoration: none;
+    }
+    body{
+      background-color: rgb(198, 236, 198);
+    }
+    h1{
+      margin-left: 1em;
+    }
+
+
+  </style>
+
 </html>
