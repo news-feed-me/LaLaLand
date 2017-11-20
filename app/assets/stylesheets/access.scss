@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#loginSignUpBox{
+#loginSignUpBox {
   float: right;
   display: inline;
   margin-right: 2em;
@@ -13,23 +13,23 @@
   box-shadow: 10px 10px 10px grey;
 }
 
-#title{
+#title {
   float: left;
   display: inline;
   margin-left: 2em;
 }
 
-#topBlock{
+#topBlock {
   background: linear-gradient(to right, #33cc33, #009933);
   padding-bottom: 2em;
 }
 
-#login{
+#login {
   animation-name: loginPop;
   animation-duration: 3s;
 }
 
-@keyframes loginPop{
+@keyframes loginPop {
   0% {opacity: 0;}
   25% {opacity: 0.25;}
   50% {opacity: 0.5;}
@@ -38,7 +38,7 @@
 
 }
 
-#loginBox{
+#loginBox {
   margin-left: 20em;
   margin-right: 20em;
   margin-top: 10em;
@@ -51,6 +51,6 @@
   box-shadow: 10px 10px 10px grey;
 }
 
-body{
+body {
   background-color: rgb(198, 236, 198);
 }
