@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FeedMe | <%= @page_title || @user_name %></title>
+    <%= stylesheet_link_tag 'users' %>
+  </head>
+  <body>
+    <div id="header">
+      <h1>FeedMe</h1>
+      <div class="navigation_links">
+        <div class="navigation_link"><a href="\access\logout">Logout</a></div>
+        <div class="navigation_link"><a href="\user\display">Home</a></div>
+        <div class="navigation_link"><a href="\users\user_profile">Edit Account</a></div>
+        <div class="navigation_link"><a href="\users\edit_subscriptions">Add/Remove Subscriptions</a></div>
+        <div class="navigation_link"><a href="">Favourites</a></div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="content">
+        <!-- before yield -->
+        <%= yield %>
+        <!-- after yield -->
+      </div>
+    </div>
+    <div id="footer">
+      <p id="copyright">&copy; FeedMe</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<%= simple_form_for @user do |entry| %>
+<%= render 'shared/error_messages' %>
+<div id="signup_subscription_list">
+  <table>
+    <%if $no_subscriptions %>
+    <p style ="color:red;"> **You must subscribe to atleast one news channel** </p>
+    <% end %>
+    <head> SUBSCRIPTIONS: </head>
+    <br><br>
+      <% @subs1.each do |ssub| %>
+        <% if @subscriptions.include?(ssub) %>
+          <%= check_box_tag("sources[]", ssub.name, :checked => true) %>
+          <%= label_tag(ssub.name) %>
+        <% else %>
+          <%= check_box_tag("sources[]", ssub.name ) %>
+          <%= label_tag(ssub.name) %>
+        <% end %>
+    <p>
+      <% end  %>
+
+  </table>
+
+</div>
+</p>
+<p>
+  <%= submit_tag "Update Subscriptions" %>
+</p>
+<% end %>

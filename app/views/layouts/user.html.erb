@@ -8,17 +8,11 @@
     <div id="header">
       <h1>FeedMe</h1>
       <div class="navigation_links">
-        <div class="navigation_link"><a id="links", href="\access\logout">Logout</a></div>
-        <div class="navigation_link"><a id="links", href="\user\display">Home</a></div>
-        <div class="navigation_link"><a id="links", href="">Edit Account</a></div>
-        <div class="navigation_link"><a id="links", href="">Add/Remove Subscriptions</a></div>
-        <div class="navigation_link"><a id="links", href="">Favourites</a></div>
-        <div class="search_bar">
-          <%= form_tag('/user/display', :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], placeholder: "FeedMe" %>
-            <%= submit_tag "Search", :name => nil %>
-          <% end %>
-        </div>
+        <div class="navigation_link"><a href="\access\logout">Logout</a></div>
+        <div class="navigation_link"><a href="\user\display">Home</a></div>
+        <div class="navigation_link"><a href="\users\user_profile">Edit Account</a></div>
+        <div class="navigation_link"><a href="\users\edit_subscriptions">Add/Remove Subscriptions</a></div>
+        <div class="navigation_link"><a href="">Favourites</a></div>
       </div>
       <div id="main">
         <div id="content">

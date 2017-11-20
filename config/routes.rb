@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get "welcome/index", to: "welcome#index", as: :home
   get "access/logout", to: "access#logout", as: :logout
   get 'access/index', to: "access#index", as: :access_index
-
+  get 'users/user_profile', to: "users#user_profile", as: :user_profile
+  get 'users/edit_subscriptions', to: "users#edit_subscriptions"
+  #get 'users/update_subscribes', to: "users#update_subscribes", as: :update_subscribes
   resources :widgets
   resources :users
   resources :subscribes
