@@ -7,6 +7,7 @@ body{
   display: flex;
   flex-direction: column;
   border-style: solid;
+  background-color: rgb(198, 236, 198);
 }
       .header{
         width:100%;
@@ -23,6 +24,7 @@ body{
             flex-direction: row;
             justify-content: flex-end;
             border-style:solid;
+            background-color: white;
             border-color: red;
 
 
@@ -40,10 +42,12 @@ body{
         width: 100%;
         border-style: solid;
         display: flex;
+        background-color: white;
 
       }
 
           .search_bar {
+            background-color: white;
           }
 
           .filters{
