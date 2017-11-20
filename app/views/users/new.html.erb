@@ -9,7 +9,6 @@
   <%= simple_form_for @user do |entry| %>
     <%= render 'shared/error_messages' %>
 
-
   <div id="usersSignupTable">
 
     <h3> Sign Up </h3>
@@ -52,9 +51,12 @@
       </tr>
 
     </table>
-
+    <hr>
     <div id="signup_subscription_list">
       <table>
+        <%if $no_subscriptions %>
+        <p style ="color:red;"> **You must subscribe to atleast one news channel** </p>
+        <% end %>
         <head> SUBSCRIPTIONS: </head>
         <br>
         <br>
@@ -68,6 +70,7 @@
             <p>
               <% end  %>
 
+
       </table>
 
     </div>
@@ -75,7 +78,8 @@
     </p>
 
     <p>
-      <%= submit_tag("Create my account") %>
+      <%= submit_tag("Create Account") %>
+
     </p>
   <% end %>
 

@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   layout false
 
+  $no_subscriptions = false
+
   before_action :check_log_in, :except => [:create, :new]
   def new
     @sources = Array.new
@@ -37,6 +39,11 @@ class UsersController < ApplicationController
       end
 
     else
+      if !params['sources']
+        $no_subscriptions = true
+      else
+        $no_subscriptions = false
+      end
      render action: "new", notice: "Signup errors"
     end
   end
