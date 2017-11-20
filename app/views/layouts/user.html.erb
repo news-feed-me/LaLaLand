@@ -5,25 +5,46 @@
     <%= stylesheet_link_tag 'user' %>
   </head>
   <body>
-    <div id="header">
-      <h1>FeedMe</h1>
-      <div class="navigation_links">
-        <div class="navigation_link"><a href="\access\logout">Logout</a></div>
-        <div class="navigation_link"><a href="\user\display">Home</a></div>
-        <div class="navigation_link"><a href="">Edit Account</a></div>
-        <div class="navigation_link"><a href="">Add/Remove Subscriptions</a></div>
-        <div class="navigation_link"><a href="">Favourites</a></div>
+
+    <div id="mainBlock">
+      <div id="header">
+        <h1>FeedMe</h1>
+        <div class="navigation_links">
+          <div class="navigation_link"><a href="\access\logout">Logout</a></div>
+          <div class="navigation_link"><a href="\user\display">Home</a></div>
+          <div class="navigation_link"><a href="">Edit Account</a></div>
+          <div class="navigation_link"><a href="">Add/Remove Subscriptions</a></div>
+          <div class="navigation_link"><a href="">Favourites</a></div>
+        </div>
+      </div>
+      <div id="main">
+        <div id="content">
+          <!-- before yield -->
+          <%= yield %>
+          <!-- after yield -->
+        </div>
+      </div>
+      <div id="footer">
+        <p id="copyright">&copy; FeedMe</p>
       </div>
     </div>
-    <div id="main">
-      <div id="content">
-        <!-- before yield -->
-        <%= yield %>
-        <!-- after yield -->
-      </div>
-    </div>
-    <div id="footer">
-      <p id="copyright">&copy; FeedMe</p>
-    </div>
+
   </body>
+  <style>
+    #header{
+      background-color: white;
+    }
+    #mainBlock{
+      margin-left: 1em;
+      margin-right: 1em;
+      border-color: black;
+      border-style: solid;
+      background-color: white;
+    }
+    body{
+      background-color: rgb(198, 236, 198);
+    }
+
+  </style>
+
 </html>
