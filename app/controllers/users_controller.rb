@@ -58,7 +58,9 @@ class UsersController < ApplicationController
     end
   end
 
+
   def subscribes_update
+  end
 
 
   private
