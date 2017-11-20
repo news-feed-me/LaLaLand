@@ -1,33 +1,29 @@
-<div class="search_bar">
-  <%= form_tag('/user/display', :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "FeedMe" %>
-    <%= submit_tag "Search", :name => nil %>
-  <% end %>
-</div>
 
 <div class="content">
   <div class = "filter">
     <div class="category">
+      <h> Categories: </h>
       <%= form_tag('/user/display',id: "category_input", method: "get") do %>
         <% @categories.each do |category| %>
           <%= radio_button_tag(:category, category) %>
-          <%= label_tag(:category, category) %>
+          <%= label_tag(:category, category.capitalize) %>
           <p>
         <%end  %>
-        <%= submit_tag("get") %>
+        <%= submit_tag("Apply Filter") %>
       <% end %>
     </div>
 
     <div class="sources">
+      <h> Your subscriptions: </h>
       <p> This is list of sources. They correspond to list of articles;
       <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
         <% @user_subscriptions.each do |subscription| %>
 
         <%= check_box_tag("sources[]", subscription.name) %>
-        <%= label_tag(subscription.name) %>
+        <%= label_tag(subscription.name.capitalize) %>
           <p>
         <%end  %>
-        <%= submit_tag("get") %>
+        <%= submit_tag("Apply Filter") %>
       <% end %>
     </div>
   </div>

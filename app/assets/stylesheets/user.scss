@@ -6,7 +6,7 @@ body{
   width: auto;
   display: flex;
   flex-direction: column;
-  border-style: solid;
+  border-style: double;
 }
       .header{
         width:100%;
@@ -17,70 +17,81 @@ body{
 
       }
           .navigation_links{
-            width:100%;
-            height:70%;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            border-style:solid;
-            border-color: red;
+          list-style-type: lower-greek;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+
 
 
 
           }
             .navigation_link{
-              width:10%;
-              height:90%;
-              border-style:solid;
-              border-color: blue;
+              display: block;
+              float: right;
+              color: white;
+              padding: 14px 16px;
+              text-align: center;
+              text-decoration: none;
             }
+            .navigation_link:hover
+            {
+              background-color: #4CAF50
+            }
+
+
 
       .content{
         margin: auto;
         width: 100%;
         border-style: solid;
+        border-color: yellow;
         display: flex;
 
       }
 
           .search_bar {
+              padding: 14px 16px;
+              float: left;
           }
 
           .filters{
-            width: 30%;
-            border-style:solid;
-            background-color: blue;
-            display: flex;
-            flex-direction: column;
-            margin:auto;
+            background-color: #333;
+
+
           }
               .category {;
-                border-style:solid;
-                border-color: red;
+
                 display: flex;
                 margin:auto;
                 flex-direction: column;
+                color: white;
+                background-color: #333;
               }
               .sources {;
-                border-style:solid;
-                border-color: blue;
+                color: white;
                 display: flex;
                 margin:auto;
                 flex-direction: column;
+                background-color: #333;
+                border-top-style: double;
+                border-top-color: white;
               }
 
           .articles {
             margin: auto;
-            width: 70%;
+            width: 65%;
             height: auto;
 
-            border-style: solid;
+
             display: flex;
 
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: baseline;
+            align-items: center;
+
           }
             .article {
 
@@ -110,6 +121,10 @@ body{
         height: 200px;
         margin:auto;
       }
+#links
+{
+  color: white;
+}
 
 
   #usersSignupTable{
