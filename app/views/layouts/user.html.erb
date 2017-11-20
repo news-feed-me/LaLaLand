@@ -7,19 +7,21 @@
   <body>
     <div id="header">
       <h1>FeedMe</h1>
+
       <div class="navigation_links">
-        <div class="navigation_link"><a href="\access\logout">Logout</a></div>
-        <div class="navigation_link"><a href="\user\display">Home</a></div>
-        <div class="navigation_link"><a href="\users\user_profile">Edit Account</a></div>
-        <div class="navigation_link"><a href="\users\edit_subscriptions">Add/Remove Subscriptions</a></div>
-        <div class="navigation_link"><a href="">Favourites</a></div>
+        <li class="navigation_link"><a id="links", href="\access\logout">Logout</a></li>
+        <li class="navigation_link"><a id="links", href="\user\display">Home</a></li>
+        <li class="navigation_link"><a id="links", href="\users\user_profile">Edit Account</a></li>
+        <li class="navigation_link"><a id="links", href="\users\edit_subscriptions">Add/Remove Subscriptions</a></li>
+        <li class="navigation_link"><a id="links", href="">Favourites</a></li>
         <div class="search_bar">
-  <%= form_tag('/user/display', :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "FeedMe" %>
-    <%= submit_tag "Search", :name => nil %>
-  <% end %>
-</div>
+          <%= form_tag('/user/display', :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "FeedMe" %>
+            <%= submit_tag "Search", :name => nil %>
+          <% end %>
+        </div>
       </div>
+
       <div id="main">
         <div id="content">
           <!-- before yield -->
@@ -34,9 +36,7 @@
 
   </body>
   <style>
-    #header{
-      background-color: white;
-    }
+
     #mainBlock{
       margin-left: 1.5em;
       margin-right: 1.5em;
@@ -63,20 +63,11 @@
     #button5:hover{
       background-color: #ff5050;
     }
-    .navigation_link{
-      padding-left: 3em;
-      background-color: rgb(51, 204, 51);
-      border-width: 1px;
-    }
-    .menu{
-      color: white;
-      text-decoration: none;
-    }
-    body{
-      background-color: rgb(198, 236, 198);
-    }
+
+
     h1{
       margin-left: 1em;
+
     }
 
 
