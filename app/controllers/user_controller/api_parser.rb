@@ -47,7 +47,7 @@ class UserController
 
     private
       def getUser
-        return User.find_by_user_name(@userName).id
+        return User.find_by_user_name(@userName).user_id
       end
 
       def getSubscribes(userId)

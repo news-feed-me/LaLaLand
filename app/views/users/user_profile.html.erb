@@ -1,0 +1,49 @@
+
+
+<%= simple_form_for @user do |entry| %>
+<%= render 'shared/error_messages' %>
+<div id="usersSignupTable">
+
+  <h3> Profile </h3>
+
+  <table>
+    <tr>
+      <td> <%= entry.label :first_name, "First Name:" %> </td>
+      <td> <%= entry.text_field :first_name, class: 'form-control' %> </td>
+    </tr>
+
+    <tr>
+      <td> <%= entry.label :last_name, "Last Name:" %> </td>
+      <td> <%= entry.text_field :last_name, class: 'form-control' %> </td>
+    </tr>
+
+    <tr>
+      <td> <%= entry.label :user_name, "Username:" %> </td>
+      <td> <%= entry.text_field :user_name, class: 'form-control' %> </td>
+    </tr>
+
+    <tr>
+      <td> <%= entry.label :email, "Email:" %> </td>
+      <td> <%= entry.text_field :email, class: 'form-control' %> </td>
+    </tr>
+
+    <tr>
+      <td> <%= entry.label :password,"Password:" %> </td>
+      <td> <%= entry.password_field :password, class: 'form-control' %> </td>
+    </tr>
+
+    <tr>
+      <td> <%= entry.label :password_confirmation, "Confirm Password:" %> </td>
+      <td> <%= entry.password_field :password_confirmation, class: 'form-control'%> </td>
+    </tr>
+
+    <tr>
+      <td> <%= entry.label :birth_date, "Date of Birth:" %> </td>
+      <td> <%= entry.date_field :birth_date, class: 'form-control' %> </td>
+    </tr>
+  </table>
+    <p>
+      <%= submit_tag("Update Profile") %>
+    </p>
+  </div>
+<% end %>
