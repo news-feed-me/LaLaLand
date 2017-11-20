@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @subs1 = Subscription.all
+    render :layout => nil
   end
 
   def create
