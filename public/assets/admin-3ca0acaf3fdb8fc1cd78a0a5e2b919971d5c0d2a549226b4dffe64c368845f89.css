@@ -1,0 +1,216 @@
+/* Admin Stylesheet */
+/* Structure */
+/* line 5, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#content {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* line 10, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#content h2 {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 15, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.login form {
+  margin: 100px 250px;
+}
+
+/* line 19, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.menu .identity {
+  text-align: center;
+}
+
+/* line 23, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.menu ul {
+  margin: 3em 250px;
+  list-style: none;
+}
+
+/* line 28, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.menu ul li {
+  margin-bottom: 1em;
+}
+
+/* line 32, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 36, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* large action buttons* */
+/* line 41, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a.action {
+  float: right;
+  padding: 2px 5px;
+  margin: 0 0 1em 1em;
+  background: #94B26F;
+  color: #4C2516;
+  border: 1px solid #4C2516;
+  text-decoration: none;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* line 53, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a.action:hover {
+  background: #B6D491;
+}
+
+/* small action buttons */
+/* line 58, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.actions {
+  width: 200px;
+}
+
+/* line 62, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.actions a.action {
+  float: left;
+  min-width: 3.5em;
+  padding: 1px 2px;
+  matgin: 2px 5px;
+  font-size: 0.7em;
+}
+
+/* CRUD */
+/* line 71, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.notice {
+  height: 1.25em;
+  padding: 0.5em;
+  text-align: center;
+  background: #B6D491;
+  color: #4C2516;
+}
+
+/* line 79, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.back-link {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+/* line 84, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.form-buttons {
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* line 89, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.index table {
+  text-align: center;
+  white-space: nowrap;
+  clear: both;
+  width: 100%;
+}
+
+/* line 96, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.index table tr td {
+  border: 1px solid #666666;
+}
+
+/* line 100, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.show table {
+  clear: both;
+  margin: 0 200px;
+  width: 300px;
+}
+
+/* line 106, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.show table .wide {
+  width: 600px;
+  margin: 0 50px;
+}
+
+/* line 111, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.show table tr th {
+  white-space: nowrap;
+  padding-right: 5px;
+}
+
+/* line 116, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.show table tr td {
+  border: 1px solid #666666;
+}
+
+/* line 120, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.edit table, .new table {
+  margin: 0 auto;
+}
+
+/* line 124, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.section + .section {
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+  border-top: 1px dotted #666666;
+}
+
+/* status_tag */
+/* line 131, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+spa.status {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0.25em auto;
+  padding: 0;
+  border: 1px solid #000000;
+}
+
+/* line 140, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+span.status.true {
+  background: green;
+  color: green;
+}
+
+/* line 145, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+span.status.false {
+  background: red;
+  color: red;
+}
+
+/* Errors */
+/* line 155, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.fieldWithErrors label {
+  color: #AA0000;
+}
+
+/* line 163, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation {
+  width: 400px;
+  padding: 0;
+  margin: 0 auto 1.5em;
+  border: 1px solid #AA0000;
+  background-color: #FFFFFF;
+  font-size: 12px;
+}
+
+/* line 172, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation h2 {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 5px;
+  margin: 0;
+  width: 380px;
+  background-color: #AA0000;
+  color: #FFFFFF;
+}
+
+/* line 182, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation p {
+  color: #333333;
+  margin: 0;
+  padding: 3px 0.5em;
+}
+
+/* line 188, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation ul {
+  margin-top: 0;
+}
+
+/* line 192, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation ul li {
+  list-style: square;
+}

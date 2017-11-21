@@ -2,11 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
+body {
   background-color: rgb(198, 236, 198);
 }
 
-#welcomeSignupLoginBox{
+#welcomeSignupLoginBox {
   float: right;
   display: inline;
   margin-right: 2em;
@@ -18,19 +18,18 @@ body{
   background-color: white;
 }
 
-#title{
+#title {
   float: left;
   display: inline;
   margin-left: 2em;
 }
 
-#topBlock{
+#topBlock {
   background: linear-gradient(to right, #33cc33, #009933);
   padding-bottom: 2em;
 }
 
 #usersSignupTable{
-
   margin: auto;
   width: 50%;
   padding: 3em 3em 3em 3em;
@@ -38,14 +37,13 @@ body{
   border-width: 1px;
   box-shadow: 10px 10px 10px grey;
   background-color: white;
-
 }
 
 #backButton{
 
 }
 
-td{
+td {
   position: relative;
   left: 6em;
   border-color: white;
@@ -53,25 +51,25 @@ td{
   border-style: solid;
 }
 
-tr{
+tr {
   border-color: white;
   border-width: 1em;
   border-style: solid;
 }
 
-#error_explanation
-{
+#error_explanation {
   color: red;
-  ul{
-    color: red;
-    margin: 0 0 30px 0;
-  }
 }
 
-.field_with_errors{
-  @extend .has-error !optional;
-    .form-control
-    {
-      color: red;
-    }
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
+}
+
+.field_with_errors {
+
+}
+
+.form-control {
+  color: red;
 }

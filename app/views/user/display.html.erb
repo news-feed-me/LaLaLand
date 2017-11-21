@@ -1,4 +1,3 @@
-
 <div class="content">
   <div class = "filter">
     <div class="category">
@@ -15,7 +14,6 @@
 
     <div class="sources">
       <h> Your subscriptions: </h>
-      <p> This is list of sources. They correspond to list of articles;
       <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
         <% @user_subscriptions.each do |subscription| %>
 

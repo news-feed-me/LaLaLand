@@ -8,8 +8,10 @@ class UsersController < ApplicationController
   $no_subscriptions = false
 
   def new
+    @page_title = "Signup"
     @user = User.new
     @subs1 = Subscription.all
+    render :layout => nil
   end
 
   def create
@@ -38,7 +40,7 @@ class UsersController < ApplicationController
       else
         $no_subscriptions = false
       end
-     render action: "new", notice: "Signup errors"
+     render action: "new", layout: nil, notice: "Signup errors"
     end
   end
 
