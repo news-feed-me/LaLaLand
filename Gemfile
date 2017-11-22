@@ -51,6 +51,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'faker'
+  gem 'shoulda-matchers', '~> 3.0.0'
 end
 
 # Use Capistrano for deployment

@@ -24,8 +24,8 @@ class User < ActiveRecord::Base
   validates_length_of :password, :within => 8..255
   validates_confirmation_of :password
   #validates_presence_of :password_confirmation
-  
-  validates_presence_of :birth_date
+
+  #validates_presence_of :birth_date
   #validates_format_of :birth_date, :with => /\d{2}\/\d{2}\/\d{4}/,
 
 
