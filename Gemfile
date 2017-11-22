@@ -45,6 +45,14 @@ gem 'puma'
 # Added by Misha to make API calls to the server;
 gem 'httparty'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'faker'
+end
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
