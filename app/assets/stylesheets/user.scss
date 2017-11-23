@@ -113,16 +113,19 @@ body {
   align-items: center;
   border-style: solid;
   border-color: black;
-  box-shadow: 10px 10px 10px grey;
+  //box-shadow: 10px 10px 10px grey;
+  background-color: #355c7d;
 }
 
 .article {
-  border-style: double;
+  border-bottom-style: solid;
   border-color: black;
   border-spacing: 5px;
   width: 98%;
   flex-direction:row; /*this section is for the article subelements */
   flex-wrap: wrap;
+  margin-bottom: 2em;
+  //color: white;
 }
 
 .article_image {
@@ -135,7 +138,7 @@ body {
 
 .article_text {
   width: 100%;
-  color: green;
+  color: white;
   text-align: left;
   padding: 15px 10px;
 }
