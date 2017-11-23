@@ -8,12 +8,12 @@
     <div id="header">
       <h1>FeedMe</h1>
 
-      <div class="navigation_links">
-        <li class="navigation_link"><a id="links", href="\access\logout">Logout</a></li>
-        <li class="navigation_link"><a id="links", href="\user\display">Home</a></li>
-        <li class="navigation_link"><a id="links", href="\users\user_profile">Edit Account</a></li>
-        <li class="navigation_link"><a id="links", href="\users\edit_subscriptions">Add/Remove Subscriptions</a></li>
-        <li class="navigation_link"><a id="links", href="">Favourites</a></li>
+      <div class="naviBar">
+        <li class="navi"><a id="links", href="\access\logout">Logout</a></li>
+        <li class="navi"><a id="links", href="\user\display">Home</a></li>
+        <li class="navi"><a id="links", href="\users\user_profile">Edit Account</a></li>
+        <li class="navi"><a id="links", href="\users\edit_subscriptions">Add/Remove Subscriptions</a></li>
+        <li class="navi"><a id="links", href="">Favourites</a></li>
         <div class="search_bar">
           <%= form_tag('/user/display', :method => "get", id: "search-form") do %>
             <%= text_field_tag :search, params[:search], placeholder: "FeedMe" %>
@@ -35,42 +35,6 @@
     </div>
 
   </body>
-  <style>
 
-    #mainBlock{
-      margin-left: 1.5em;
-      margin-right: 1.5em;
-      margin-top: 1.5em;
-      margin-bottom: 1.5em;
-      border-color: black;
-      border-style: solid;
-      background-color: white;
-      border-width: 2px;
-      box-shadow: 10px 10px 10px grey;
-    }
-    #button1:hover{
-      background-color: #ff5050;
-    }
-    #button2:hover{
-      background-color: #ff5050;
-    }
-    #button3:hover{
-      background-color: #ff5050;
-    }
-    #button4:hover{
-      background-color: #ff5050;
-    }
-    #button5:hover{
-      background-color: #ff5050;
-    }
-
-
-    h1{
-      margin-left: 1em;
-
-    }
-
-
-  </style>
 
 </html>
