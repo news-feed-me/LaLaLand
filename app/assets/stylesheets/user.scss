@@ -45,8 +45,37 @@ body {
   padding: 14px 16px;
   text-align: center;
   text-decoration: none;
-  border-style: groove;
-  border-color: white;
+  border-style: solid;
+  border-color: black;
+  border-left-style: none;
+  //box-shadow: 10px 10px 10px grey;
+}
+
+
+
+#naviHome{
+  border-color: black;
+  border-left-style: solid;
+}
+
+#naviHome:hover{
+  background-color: #3333ff;
+}
+
+#naviProfile:hover{
+  background-color: #3333ff;
+}
+
+#naviSubscribe:hover{
+  background-color: #3333ff;
+}
+
+#naviFavorites:hover{
+  background-color: #3333ff;
+}
+
+#naviLogOut:hover{
+  background-color: #3333ff;
 }
 
 .content {
