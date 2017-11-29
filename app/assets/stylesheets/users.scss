@@ -6,6 +6,18 @@ body {
   background-color: rgb(198, 236, 198);
 }
 
+#signup_subscription_list{
+  background-color: white;
+  margin-right: 11em;
+  margin-left: 10em;
+  //margin-top: 2em;
+  padding-top: 3em;
+  padding-left: 3em;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 10px 10px 10px grey;
+}
+
 #welcomeSignupLoginBox {
   float: right;
   display: inline;
