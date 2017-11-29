@@ -3,40 +3,79 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  width: auto;
+  width: fixed;
   display: flex;
   flex-direction: column;
-  border-style: double;
-  border-color: white;
-  background-color: #355c7d;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
+  background-color: rgb(198, 236, 198);
+  margin-left: 1.75em;
+  margin-right: 1.75em;
+  margin-top: 1em;
+//  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
 
 #header {
   background-color: #355c7d;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+//  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   color: white;
+  //box-shadow:  10px 10px 10px grey;
+  border-color: black;
+  border-style: solid;
+
+  border-width: 3px;
 }
 
-.navigation_links {
+.naviBar {
   padding: 15px 10px;
   padding-right: 10px;
   overflow: hidden;
   background-color: #355c7d;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  //background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   width: auto;
-  border-bottom-style: double;
-  border-color: white;
+  //border-bottom-style: solid;
+  border-color: black;
+  //box-shadow:  10px 10px 10px grey;
 }
 
-.navigation_link {
+.navi {
   display: block;
   float: left;
   padding: 14px 16px;
   text-align: center;
   text-decoration: none;
-  border-style: groove;
-  border-color: white;
+  border-style: solid;
+  border-color: black;
+  border-left-style: none;
+  //box-shadow: 10px 10px 10px grey;
+}
+
+
+
+#naviHome{
+  border-color: black;
+  border-left-style: solid;
+}
+
+#naviHome:hover{
+  background-color: #3333ff;
+}
+
+#naviProfile:hover{
+  background-color: #3333ff;
+}
+
+#naviSubscribe:hover{
+  background-color: #3333ff;
+}
+
+#naviFavorites:hover{
+  background-color: #3333ff;
+}
+
+#naviLogOut:hover{
+  background-color: #3333ff;
 }
 
 .content {
@@ -44,9 +83,13 @@ body {
   padding-left: 10px;
   width: 99%;
   display: flex;
-  background-color: #355c7d;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  background-color: white;
+  //background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   margin-top: 10px;
+  border-style: solid;
+  border-color: black;
+  border-left-style: none;
+  border-right-style: none;
 }
 
 .search_bar {
@@ -66,19 +109,26 @@ body {
   flex-direction: column;
   color: white;
   background-color: #355c7d;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  //background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   text-align: left;
-  border-style: double;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  //box-shadow: 10px 10px 10px grey;
 }
 
 .sources {
   color: white;
   display: flex;
-  margin:auto;
+  //margin:auto;
   flex-direction: column;
   background-color: #355c7d;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-  border-style: double;
+  //background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border-style: solid;
+  //box-shadow: 10px 10px 10px grey;
+  margin-top: 1em;
+  border-color: black;
+  border-width: 3px;
 }
 
 .articles {
@@ -90,15 +140,21 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  border-style: solid;
+  border-color: black;
+  //box-shadow: 10px 10px 10px grey;
+  background-color: #355c7d;
 }
 
 .article {
-  border-style: double;
-  border-color: white;
+  border-bottom-style: solid;
+  border-color: black;
   border-spacing: 5px;
   width: 98%;
   flex-direction:row; /*this section is for the article subelements */
   flex-wrap: wrap;
+  margin-bottom: 2em;
+  //color: white;
 }
 
 .article_image {
@@ -124,4 +180,46 @@ body {
 
 #links {
   color: white;
+}
+
+a{
+  color: green;
+  text-decoration: none;
+}
+
+#pink{
+  background-color: white;
+  width: 5em;
+}
+
+#mainBlock{
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border-color: black;
+  border-style: solid;
+  background-color: white;
+  border-width: 2px;
+  box-shadow: 10px 10px 10px grey;
+}
+#button1:hover{
+  background-color: #ff5050;
+}
+#button2:hover{
+  background-color: #ff5050;
+}
+#button3:hover{
+  background-color: #ff5050;
+}
+#button4:hover{
+  background-color: #ff5050;
+}
+#button5:hover{
+  background-color: #ff5050;
+}
+
+
+h1{
+  margin-left: 1em;
 }
