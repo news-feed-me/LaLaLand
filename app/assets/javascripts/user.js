@@ -1,7 +1,7 @@
 
 
 function changeColor(){
-  //var body = document.getElementsByTagName("body");
-  alert("hi");
+  var body = document.getElementsByTagName("body");
+
   return;
 }

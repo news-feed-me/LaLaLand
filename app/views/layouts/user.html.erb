@@ -3,10 +3,11 @@
   <head>
     <title>FeedMe | <%= @page_title || @user_name %></title>
     <%= stylesheet_link_tag 'user' %>
+    <%= javascript_include_tag 'user' %>
   </head>
   <body>
     <div id="header">
-      <h1>FeedMe</h1>
+      <h1 id="title" onclick="changeColor()">FeedMe</h1>
 
       <div class="naviBar">
         <li class="navi" id="naviHome"><a id="links", href="\user\display">Home</a></li>

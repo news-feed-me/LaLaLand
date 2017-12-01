@@ -8,6 +8,9 @@ Rails.application.config.assets.precompile += %w( users.css )
 Rails.application.config.assets.precompile += %w( welcome.css )
 Rails.application.config.assets.precompile += %w( access.css )
 Rails.application.config.assets.precompile += %w( admin.css )
+Rails.application.config.assets.precompile += %w( user.js )
+Rails.application.config.assets.precompile += %w( application.js )
+
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
