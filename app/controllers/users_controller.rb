@@ -14,8 +14,6 @@ class UsersController < ApplicationController
 
   def create
     @subs1 = Subscription.all
-    @user_name = session[:user_name]
-    @subs1 = getSources
     @user = User.new(user_params)
     if @user.valid? and params['sources']
       if @user.save
@@ -48,10 +46,10 @@ class UsersController < ApplicationController
     render :layout => nil
   end
 
-<<<<<<< HEAD
   def user_profile
     @user_name = session[:user_name]
     @user = User.find_by_user_id(session[:userid])
+
   end
 
   def update
@@ -84,28 +82,13 @@ class UsersController < ApplicationController
         render action: "user_profile"
       end
     end
-=======
-  def profile_update
-    @user = User.find(session[:userid])
-    @user.assign_attributes(user_params)
-    if @user.valid?
-      if @user.save
-        flash[:notice] = "Successfully updated!"
-      end
-    else
-      render action: "profile_update"
-    end
-  end
-
-
-  def subscribes_update
->>>>>>> f8c774edef9989bdec4829f38a9e565b5d05aa7c
   end
 
   def edit_subscriptions
     @user_name = session[:user_name]
     @user = User.find_by_user_id(session[:userid])
     subscribes = User.find_by_user_id(@user.user_id).subscribes
+    end
     @subscriptions = Array.new(subscribes.size)
     i = 0
     subscribes.each do |subscribe|
@@ -114,6 +97,7 @@ class UsersController < ApplicationController
     end
     @subs1 = Subscription.all
   end
+
 
   private
     def user_params
@@ -124,4 +108,5 @@ class UsersController < ApplicationController
     def profile
       @user = User.all
     end
+
 end
