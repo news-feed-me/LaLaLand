@@ -48,6 +48,7 @@ class UsersController < ApplicationController
     render :layout => nil
   end
 
+<<<<<<< HEAD
   def user_profile
     @user_name = session[:user_name]
     @user = User.find_by_user_id(session[:userid])
@@ -83,6 +84,22 @@ class UsersController < ApplicationController
         render action: "user_profile"
       end
     end
+=======
+  def profile_update
+    @user = User.find(session[:userid])
+    @user.assign_attributes(user_params)
+    if @user.valid?
+      if @user.save
+        flash[:notice] = "Successfully updated!"
+      end
+    else
+      render action: "profile_update"
+    end
+  end
+
+
+  def subscribes_update
+>>>>>>> f8c774edef9989bdec4829f38a9e565b5d05aa7c
   end
 
   def edit_subscriptions
