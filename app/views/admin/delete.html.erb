@@ -1,0 +1,19 @@
+<% @page_title = "Subscriptions" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="subscriptions delete">
+  <h2>Delete Subscription</h2>
+
+  <%= form_tag({:action => 'destroy', :id => @subscription.id}) do %>
+
+    <p>Are you sure you want to delete this subscription?</p>
+
+    <p class="reference-name"><%= @subscription.name %></p>
+
+    <div class-"form-buttons">
+      <%= submit_tag("Delete Subscription") %>
+    </div>
+
+  <% end %>
+  </div>

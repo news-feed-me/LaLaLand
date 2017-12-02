@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FeedMe | <%= @page_title || "Admin" %></title>
+    <%= stylesheet_link_tag('admin', :media => 'all') %>
+  </head>
+  <body>
+    <div id="header">
+      <h1>FeedMe Admin</h1>
+    </div>
+    <div id="main">
+      <% if !flash[:notice].blank? %>
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <div class="navigation_links">
+        <div class="navigation_link"><a href="\access\logout">Logout</a></div>
+      </div>
+      <div id="content">
+        <!-- before yield -->
+        <%= yield %>
+        <!-- after yield -->
+      </div>
+    </div>
+    <div id="footer">
+      <p id="copyright">&copy; FeedMe</p>
+    </div>
+  </body>
+</html>

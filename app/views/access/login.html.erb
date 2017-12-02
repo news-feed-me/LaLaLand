@@ -1,0 +1,27 @@
+<div id="loginBox">
+	<h2> Login </h2>
+	<table>
+		<%= form_tag(:action => 'attempt_login') do %>
+			<% if !$found %>
+			<ul>
+				<p style="color:red;"> **Username and password combination do not match** </p>
+			</ul>
+			<% end %>
+
+			<tr>
+				<td> <%= label_tag(:username) %> </td>
+				<td> <%= text_field_tag(:user_name) %> </td>
+			</tr>
+			<tr>
+				<td> <%= label_tag(:password) %> </td>
+				<td> <%= password_field_tag(:password) %> </td>
+			</tr>
+			<tr>
+				<td> <%= submit_tag("Log in") %> </td>
+			<tr>
+		<% end %>
+	</table>
+	<p> New user?
+	<%= link_to 'Sign up', signup_path %> </p>
+
+</div>

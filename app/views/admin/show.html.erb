@@ -1,0 +1,26 @@
+<% @page_title = "Subscriptions" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="subscriptions show">
+  <h2>Show Subscription</h2>
+
+  <table summary="Subscription detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @subscription.name %></td>
+    </tr>
+    <tr>
+      <th>URL</th>
+      <td><%= @subscription.url %></td>
+    </tr>
+    <tr>
+      <th>Source</th>
+      <td><%= @subscription.source_id %></td>
+    </tr>
+    <tr>
+      <th>Category</th>
+      <td><%= @subscription.category %></td>
+    </tr>
+  </table>
+</div>

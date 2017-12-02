@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FeedMe | <%= @page_title || @user_name %></title>
+    <%= stylesheet_link_tag 'user' %>
+    <%= javascript_include_tag 'user' %>
+  </head>
+  <body>
+    <div id="header">
+      <h1 id="title" onclick="changeColor()">FeedMe</h1>
+
+      <div class="naviBar">
+        <li class="navi" id="naviHome"><a id="links", href="\user\display">Home</a></li>
+        <li class="navi" id="naviProfile"><a id="links", href="\users\user_profile">Edit Account</a></li>
+        <li class="navi" id="naviSubscribe"><a id="links", href="\users\edit_subscriptions">Add/Remove Subscriptions</a></li>
+        <li class="navi" id="naviFavorites"><a id="links", href="">Favourites</a></li>
+        <li class="navi" id="naviLogOut"><a id="links", href="\access\logout">Logout</a></li>
+        <div class="search_bar">
+          <%= form_tag('/user/display', :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "FeedMe" %>
+            <%= submit_tag "Search", :name => nil %>
+          <% end %>
+        </div>
+      </div>
+
+      <div id="main">
+        <div id="content">
+          <!-- before yield -->
+          <%= yield %>
+          <!-- after yield -->
+        </div>
+      </div>
+      <div id="footer">
+        <p id="copyright">&copy; FeedMe</p>
+      </div>
+    </div>
+
+  </body>
+
+
+</html>

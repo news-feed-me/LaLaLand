@@ -1,0 +1,69 @@
+<head>
+  <title>FeedMe | <%= @page_title || @user_name %></title>
+  <%= stylesheet_link_tag 'users' %>
+</head>
+<div id="newUsers">
+  <h2 id="backButton"> <%= link_to 'Back', home_path %> </h2>
+  <%= simple_form_for @user do |entry| %>
+    <%= render 'shared/error_messages' %>
+  <div id="usersSignupTable">
+    <h3> Sign Up </h3>
+    <p> All fields are required for signup. </p>
+    <table>
+      <tr>
+        <td> <%= entry.label :first_name, "First Name:" %> </td>
+        <td> <%= entry.text_field :first_name, class: 'form-control' %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :last_name, "Last Name:" %> </td>
+        <td> <%= entry.text_field :last_name, class: 'form-control' %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :user_name, "Username:" %> </td>
+        <td> <%= entry.text_field :user_name, class: 'form-control' %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :email, "Email:" %> </td>
+        <td> <%= entry.text_field :email, class: 'form-control' %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :password,"Password:" %> </td>
+        <td> <%= entry.password_field :password, class: 'form-control' %> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :password_confirmation, "Confirm Password:" %> </td>
+        <td> <%= entry.password_field :password_confirmation, class: 'form-control'%> </td>
+      </tr>
+
+      <tr>
+        <td> <%= entry.label :birth_date, "Date of Birth:" %> </td>
+        <td> <%= entry.date_field :birth_date, class: 'form-control' %> </td>
+      </tr>
+
+    </table>
+    <hr>
+    <div id="signup_subscription_list">
+      <table>
+        <%if $no_subscriptions %>
+        <p style ="color:red;"> **You must subscribe to atleast one news channel** </p>
+        <% end %>
+        <head> SUBSCRIPTIONS: </head>
+        <br \><br \>
+        <% @subs1.each do |ssub| %>
+        <%= check_box_tag("sources[]", ssub.name ) %>
+        <%= label_tag(ssub.name) %>
+        <p>
+        <% end  %>
+      </table>
+    </div>
+    </p>
+    <p>
+      <%= submit_tag("Create Account") %>
+    </p>
+  <% end %>
+</div>

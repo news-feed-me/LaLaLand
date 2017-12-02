@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<div class="header">
+  this is header, it must contain navigation bar and all of the stuff like that.
+
+<div class="articles">
+
+  this output generates articles
+</div>
+
+<div class="category">
+  <% i = 0  %>
+  <%= form_tag("/user/ActionOne",id: "category_input", method: "get") do %>
+    <% @categories.each do |category| %>
+      <%= radio_button_tag(:category, category) %>
+      <%= label_tag(:category, category) %>
+      <p>
+    <%end  %>
+  <% end %>
+  <%= submit_tag("G", id: "category_input") %>
+</div>
+
+<div class="sources">
+  this contains sources
+</div>
+
+<div class="footer">
+  this is footer
+</div>
+
+</html>

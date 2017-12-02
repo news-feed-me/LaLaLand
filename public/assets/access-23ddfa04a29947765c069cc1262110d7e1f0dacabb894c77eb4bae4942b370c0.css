@@ -1,0 +1,66 @@
+/* line 5, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#loginSignUpBox {
+  float: right;
+  display: inline;
+  margin-right: 2em;
+  margin-top: 1em;
+  padding: 1em 2em 1em 2em;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 16, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#title {
+  float: left;
+  display: inline;
+  margin-left: 2em;
+}
+
+/* line 22, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#topBlock {
+  background: linear-gradient(to right, #33cc33, #009933);
+  padding-bottom: 2em;
+}
+
+/* line 27, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#login {
+  animation-name: loginPop;
+  animation-duration: 3s;
+}
+
+@keyframes loginPop {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 41, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#loginBox {
+  margin-left: 20em;
+  margin-right: 20em;
+  margin-top: 10em;
+  padding: 1em 1em 1em 1em;
+  border-style: solid;
+  border-color: black;
+  width: fixed;
+  background-color: white;
+  border-width: 1px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 54, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+body {
+  background-color: #c6ecc6;
+}

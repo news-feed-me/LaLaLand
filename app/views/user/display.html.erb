@@ -1,0 +1,36 @@
+<body>
+<div class="content">
+  <div class = "filter">
+    <div class="category">
+      <h> Categories: </h>
+      <%= form_tag('/user/display',id: "category_input", method: "get") do %>
+        <% @categories.each do |category| %>
+          <%= radio_button_tag(:category, category) %>
+          <%= label_tag(:category, category.capitalize) %>
+          <p>
+        <%end  %>
+        <%= submit_tag("Apply Filter") %>
+      <% end %>
+    </div>
+
+    <div class="sources">
+      <h> Your subscriptions: </h>
+      <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
+        <% @user_subscriptions.each do |subscription| %>
+
+        <%= check_box_tag("sources[]", subscription.name) %>
+        <%= label_tag(subscription.name.capitalize) %>
+          <p>
+        <%end  %>
+        <%= submit_tag("Apply Filter") %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="articles">
+    <% @articles.each do |article| %>
+    <%= raw article.outputHTML %>
+    <%end%>
+  </div>
+</div>
+</body>
