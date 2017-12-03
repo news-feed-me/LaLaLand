@@ -7,6 +7,10 @@ class Subscription < ActiveRecord::Base
     where("name ILIKE ?", "%#{query}%")
   }
 
+  scope :searchID, lambda { |query|
+    where("source_id ILIKE ?", "%#{query}%")
+  }
+
   scope :searchCategory, lambda { |query|
     where("category ILIKE ?", "%#{query}%")
   }

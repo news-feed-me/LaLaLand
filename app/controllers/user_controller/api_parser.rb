@@ -46,15 +46,21 @@ class UserController
     def getSubscriptionsBySearch(name)
       articles = Array.new
       categories = Subscription.searchCategory(name)
-      sources = Subscription.searchName(name)
+      sources_by_name = Subscription.searchName(name)
+      sources_by_id = Subscription.searchID(name)
+
       # Retrieve articles from database if searched by category.
-      if !categories.nil?
+      if !categories.empty?
         categories.each do |category|
           articles += getArticles(category.source_id)
         end
       # Retrieve articles from database if searched by source.
-      elsif !source.nil?
-        sources.each do |source|
+    elsif !sources_by_name.empty?
+        sources_by_name.each do |source|
+          articles += getArticles(source.source_id)
+        end
+      elsif !sources_by_id.empty?
+        sources_by_id.each do |source|
           articles += getArticles(source.source_id)
         end
       # Search articles through newsapi q search parameter.
@@ -72,7 +78,6 @@ class UserController
             end
           end
         end
-        puts "#{articles.size}"
       end
       return articles
     end

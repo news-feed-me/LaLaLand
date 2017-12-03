@@ -19,14 +19,10 @@ class AdminController < ApplicationController
       flag = false
     end
 
-    # Delete current records and repopulate subscriptions
+    # Update subscriptions in the database.
     # if response is valid else Flash Invalid URL notice
-    if flag && response.success?
+    if flag && response.success? && response.parsed_response.has_key? 'sources'
       data = response.parsed_response
-
-      # Delete current records
-      #Subscription.destroy_all
-
       # Populate most recent data
       add_to_database(data)
     else
