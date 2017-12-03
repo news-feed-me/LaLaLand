@@ -3,8 +3,11 @@ class CreateSubscriptions < ActiveRecord::Migration
     create_table :subscriptions, :primary_key => "subscription_id" do |t|
       t.string "name", :limit => 255
       t.string "url"
+      t.string "description"
       t.string "source_id", :unique => true
       t.string "category", :limit => 255
+      t.string "country", :limit => 255
+      t.string "language", :limit => 255
 
       t.timestamps
     end

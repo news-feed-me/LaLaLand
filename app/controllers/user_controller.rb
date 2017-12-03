@@ -2,12 +2,7 @@
 class UserController < ApplicationController
   layout 'user'
 
-  require 'NewsAPI_Source'
-  require 'NewsAPI_Article'
-
   include HTTParty
-  include NewsAPI_Source
-  include NewsAPI_Article
 
   def index
     redirect_to(:action => 'display')
@@ -29,23 +24,21 @@ class UserController < ApplicationController
 
     # Prepare Articles by Category
     elsif params.has_key?('category')
-      # subscriptions = @apiParser.getSubscriptionsByCategory(params['category'])
-      #
-      # subscriptions.each do |subscription|
-      #   prepareArticlesBySource(subscription.source_id)
-      # end
-      @user_subscriptions.each do |subscription|
-        if params['category'].include? subscription.category
-          prepareArticlesBySource(subscription.source_id)
+      if !@user_subscriptions.nil?
+        @user_subscriptions.each do |subscription|
+          if params['category'].include? subscription.category
+            prepareArticlesBySource(subscription.source_id)
+          end
         end
       end
 
     # Prepare Articles by sources
     elsif params.has_key?('sources')
       subscriptions = @apiParser.getSubscriptionsByName(params['sources'])
-
-      subscriptions.each do |subscription|
-        prepareArticlesBySource(subscription.source_id)
+      if !subscriptions.nil?
+        subscriptions.each do |subscription|
+          prepareArticlesBySource(subscription.source_id)
+        end
       end
 
     # Prepare Articles by User Subscriptions
@@ -62,27 +55,41 @@ class UserController < ApplicationController
 
   # Filters articles by sources and adds them to the array
   def prepareArticlesBySource(source)
-    articles = getNewsBySourceID(source)
-    i = 0
-    articles.each do |article|
-      href = article['url']
-      imgsrc = article['urlToImage']
-      id = i
-      text = article['title'] + "\n"
-      if article.has_key?('description')
-        text.concat(article['description'].to_s)
+    articles_from_database = @apiParser.getArticles(source)
+    if !articles_from_database.nil?
+      articles_from_database.each do |article|
+        text = ""
+        if !article.title.nil?
+          text += article.title + "\n"
+        end
+
+        if !article.description.nil?
+          text += article.description + "\n"
+        end
+
+        @articles.push(UserProfile.new(article.url, article.urlToImage,
+          article.article_id, text))
       end
-      @articles.push(Article.new(href,imgsrc,id,text))
     end
   end
 
   # Filters articles by search and adds them to the array
   def prepareArticlesBySearch
     search_result = @apiParser.getSubscriptionsBySearch(params['search'])
+    if !search_result.nil?
+      search_result.each do |article|
+        text = ""
+        desc = ""
+        if !article.title.nil?
+          text += article.title + "\n"
+        end
 
-    search_result.each do |source|
-      prepareArticlesBySource(source.source_id)
+        if !article.description.nil?
+          text += article.description + "\n"
+        end
+        @articles.push(UserProfile.new(article.url, article.urlToImage,
+          article.article_id, text))
+      end
     end
-    return search_result
   end
 end

@@ -9,9 +9,11 @@ class UserController
       subscriptions = Array.new(subscribes.size)
 
       i = 0
-      subscribes.each do |subscribe|
-        subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
-        i += 1
+      if !subscribes.nil?
+        subscribes.each do |subscribe|
+          subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
+          i += 1
+        end
       end
       return subscriptions
     end
@@ -28,21 +30,55 @@ class UserController
 
     def getSubscriptionsByName(names)
       subscriptions = Array.new
-      names.each do |name|
-        subscription = Subscription.where(:name => name)
-        subscription.each do |s|
-          subscriptions.push(s)
+      if !names.nil?
+        names.each do |name|
+          subscription = Subscription.where(:name => name)
+          if !subscription.nil?
+            subscription.each do |s|
+              subscriptions.push(s)
+            end
+          end
         end
       end
       return subscriptions
     end
 
     def getSubscriptionsBySearch(name)
-      subscriptions = Subscription.searchName(name)
-      if subscriptions.empty?
-        subscriptions = Subscription.searchCategory(name)
+      articles = Array.new
+      categories = Subscription.searchCategory(name)
+      sources = Subscription.searchName(name)
+      # Retrieve articles from database if searched by category.
+      if !categories.nil?
+        categories.each do |category|
+          articles += getArticles(category.source_id)
+        end
+      # Retrieve articles from database if searched by source.
+      elsif !source.nil?
+        sources.each do |source|
+          articles += getArticles(source.source_id)
+        end
+      # Search articles through newsapi q search parameter.
+      else
+        uri = "https://newsapi.org/v2/everything?q="
+        uri.concat(name)
+        uri.concat("&sortBy=popularity&apiKey=f52e670563fe4fe5b0d06da57eb0bbf6")
+        data = HTTParty.get(uri)
+        parsed_data = data.parsed_response
+
+        if parsed_data['status'].eql? 'ok'
+          if parsed_data.has_key? 'articles' && !parsed_data['articles'].nil?
+            parsed_data['articles'].each do |article|
+              articles.push(article)
+            end
+          end
+        end
+        puts "#{articles.size}"
       end
-      return subscriptions
+      return articles
+    end
+
+    def getArticles(source)
+      return Article.where(:source_id => source)
     end
 
     private

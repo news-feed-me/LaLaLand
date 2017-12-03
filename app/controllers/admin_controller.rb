@@ -92,18 +92,20 @@ class AdminController < ApplicationController
 
   private
     def add_to_database(data)
-      data["sources"].each do |source|
-        subscription = Subscription.find_by_source_id(source["id"])
-        if subscription
-          subscription.update_attributes(:name => source["name"], :url => source["url"],
-          :source_id => source["id"], :category => source["category"])
-        else
-          subscription = Subscription.new(:name => source["name"], :url => source["url"],
-          :source_id => source["id"], :category => source["category"])
-          subscription.save
+      if !data.nil?
+        data["sources"].each do |source|
+          subscription = Subscription.find_by_source_id(source["id"])
+          if subscription
+            subscription.update_attributes(:name => source["name"], :url => source["url"],
+            :source_id => source["id"], :category => source["category"])
+          else
+            subscription = Subscription.new(:name => source["name"], :url => source["url"],
+            :source_id => source["id"], :category => source["category"])
+            subscription.save
+          end
         end
+        flash[:notice] = "Sources added successfully!"
       end
-      flash[:notice] = "Sources added successfully!"
     end
 
     def subscription_params

@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
   has_many :subscribes
   has_many :subscriptions, :through => :subscribes
 
+  has_many :favourites
+  has_many :articles, :through => :favourites
+
   validates_presence_of :first_name, :last_name
 
   validates_presence_of :user_name
@@ -24,7 +27,7 @@ class User < ActiveRecord::Base
   validates_length_of :password, :within => 8..255
   validates_confirmation_of :password
   #validates_presence_of :password_confirmation
-  
+
   validates_presence_of :birth_date
   #validates_format_of :birth_date, :with => /\d{2}\/\d{2}\/\d{4}/,
 
