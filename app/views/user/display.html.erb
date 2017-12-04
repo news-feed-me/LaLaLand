@@ -29,10 +29,9 @@
 
   <div class="articles">
     <% @articles.each do |article| %>
+    <button class="favoriteButton" type="button"> Favorite </button>
     <%= raw article.outputHTML %>
-    <div class="share-buttons">
 
-    </div>
     <%end%>
   </div>
 </div>

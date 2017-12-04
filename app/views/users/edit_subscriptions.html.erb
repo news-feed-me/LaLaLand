@@ -11,10 +11,14 @@
         <% if @subscriptions.include?(ssub) %>
           <%= check_box_tag("sources[]", ssub.name, :checked => true) %>
           <%= label_tag(ssub.name) %>
+
+
         <% else %>
           <%= check_box_tag("sources[]", ssub.name ) %>
           <%= label_tag(ssub.name) %>
         <% end %>
+
+
     <p>
       <% end  %>
 
