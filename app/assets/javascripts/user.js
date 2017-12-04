@@ -15,7 +15,18 @@ function changeColor(){
   return;
 }
 
-function favoriteClick(id){
+function favoriteClick(id, article_status){
 
+  if (article_status == false){
 
+    article_status = true;
+
+  }
+  else {
+
+    article_status = false;
+
+  }
+
+  return;
 }
