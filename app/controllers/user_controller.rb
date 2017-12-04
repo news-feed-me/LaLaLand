@@ -4,13 +4,28 @@ class UserController < ApplicationController
 
   include HTTParty
   $added_to_favourites = false
+
   def index
     redirect_to(:action => 'display')
   end
 
   def favourites
-    $added_to_favourites = !$added_to_favourites
-    redirect_to(:action => 'display')
+    isFavourite = Favourite.find_by_article_id(params[:data])
+    if isFavourite.nil?
+      fav = Favourite.new(:user_id => session[:userid],
+        :article_id => params[:data])
+      if fav.save
+        # Do Nothing
+      else
+        flash[:notice] = "Sorry, unable to add to favourites."
+      end
+    else
+      if fav.destroy
+        # Do nothing
+      else
+        flash[:notice] = "Sorry, unable to update the favourites"
+      end
+    end
   end
 
   # Prepare Articles to be rendered by the view.

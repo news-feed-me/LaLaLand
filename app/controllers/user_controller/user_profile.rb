@@ -20,7 +20,7 @@ class UserController
     end
 
     def favourites
-      if $added_to_favourites
+      if getStatus
         return "<a href=\"\\user\\favourites\">
         <img src=\"https://png.icons8.com/add-to-favorites/ultraviolet/50/000000\"></a>"
       else
@@ -36,6 +36,14 @@ class UserController
       <img src=\"https://png.icons8.com/twitter/color/50/000000\"></a>
       <a href=\"https://plus.google.com/share?url=#{@href}\" target=\"_blank\">
       <img src=\"https://png.icons8.com/google-plus/color/50/000000\"></a>"
+    end
+
+    def getStatus
+      if Favourite.find_by_article_id(@id).nil?
+        return false
+      else
+        return true
+      end
     end
   end
 end
