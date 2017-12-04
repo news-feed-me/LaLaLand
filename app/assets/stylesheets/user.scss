@@ -3,9 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.favoriteButton{
+.favoriteButtons{
   display: inline;
   float: right;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  background-color: yellow;
+  margin-left: 35em;
 }
 body {
   width: fixed;

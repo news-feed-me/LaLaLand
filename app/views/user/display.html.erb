@@ -29,7 +29,7 @@
 
   <div class="articles">
     <% @articles.each do |article| %>
-    <button class="favoriteButton" type="button"> Favorite </button>
+    <h3 class="favoriteButtons"> Favorite </h3>
     <%= raw article.outputHTML %>
 
     <%end%>
