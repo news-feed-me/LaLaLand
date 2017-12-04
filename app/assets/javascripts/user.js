@@ -16,5 +16,6 @@ function changeColor(){
 }
 
 function favoriteClick(id){
-  
+
+
 }

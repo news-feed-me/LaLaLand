@@ -1,3 +1,7 @@
+<html>
+  <head>
+    <%= javascript_include_tag 'user' %>
+  </head>
 <body>
 <div class="content">
   <div class = "filter">
@@ -30,10 +34,12 @@
     <% @articles.each do |article| %>
       <div class="article">
         <%= raw article.outputHTML%>
-        <%= raw article.favourites( :onClick => "favoriteClick(this.id)" )%> 
+        <%= raw article.favourites( :onClick => "favoriteClick(this.id)" )%>
         <%= raw article.share_buttons %>
       </div>
     <%end%>
   </div>
 </div>
 </body>
+
+</html>
