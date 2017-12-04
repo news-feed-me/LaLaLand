@@ -14,3 +14,7 @@ function changeColor(){
 
   return;
 }
+
+function favoriteClick(id){
+  
+}
