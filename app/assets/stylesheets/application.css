@@ -11,7 +11,9 @@
  * file per style scope.
  *
  *= require_self
+ *= require user
  *= require admin
  *= require access
+ *= require social-share-button
  *= require_tree .
  */

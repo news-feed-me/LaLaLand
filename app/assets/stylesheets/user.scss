@@ -220,7 +220,16 @@ a{
   background-color: #ff5050;
 }
 
-
 h1{
   margin-left: 1em;
+}
+
+.social-share-button-facebook {
+ postition: relative;
+ border-color: black;
+ border-style: solid;
+ margin-left: 50px;
+ width: 200px;
+ height: 16px;
+ background: url("/social/facebook.png") no-repeat;
 }
