@@ -3,12 +3,13 @@ class UserController < ApplicationController
   layout 'user'
 
   include HTTParty
-
+  $added_to_favourites = false
   def index
     redirect_to(:action => 'display')
   end
 
   def favourites
+    $added_to_favourites = !$added_to_favourites
     redirect_to(:action => 'display')
   end
 

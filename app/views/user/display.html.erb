@@ -28,7 +28,11 @@
 
   <div class="articles">
     <% @articles.each do |article| %>
-      <%= raw article.outputHTML %>
+      <div class="article">
+        <%= raw article.outputHTML %>
+        <%= raw article.favourites %>
+        <%= raw article.share_buttons %>
+      </div>
     <%end%>
   </div>
 </div>
