@@ -22,7 +22,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 # Allowing users to share content on their favourite social networking site
-gem 'social-share-button', '~> 0.1.8'
+gem 'social-share-button'
 
 # Schedule article updates every timeperiod
 gem 'rufus-scheduler'

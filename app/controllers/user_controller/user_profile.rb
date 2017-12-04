@@ -23,14 +23,25 @@ class UserController
     end
 
     def shareButtons
-      shareButtons = "<div class=\"share-buttons\">"+
-      "<social_share_button_tag('my home page') </div>"
-      return shareButtons
+      share = "<div class=\"share-buttons\">"+
+      "social_share_button_tag(#{@text}, :url => #{@href}, :image => #{@src}) </div>"
+      return share
     end
 
     def facebookShare
       button = "<div class=\"fb-share-button\" data-href=\"#{href}\" data-layout=\"button_count\" data-size=\"small\" data-mobile-iframe=\"true\"><a class=\"fb-xfbml-parse-ignore\" target=\"_blank\" href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse\">Share</a></div>"
     end
 
+    def link
+      return @href
+    end
+
+    def img
+      return @src
+    end
+
+    def title
+      return @text
+    end
   end
 end
