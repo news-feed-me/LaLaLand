@@ -82,6 +82,16 @@ class UserController
       return articles
     end
 
+    def getArticlesByIds(articleIds)
+      articles = Array.new
+      if !articleIds.empty?
+        articleIds.each do |article|
+          articles += Article.find_by_article_id(article.article_id)
+        end
+      end
+      return articles
+    end
+
     def getArticles(source)
       return Article.where(:source_id => source)
     end

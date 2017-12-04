@@ -3,15 +3,16 @@ class UserController < ApplicationController
   layout 'user'
 
   include HTTParty
-  $added_to_favourites = false
+  $favourite = false
 
   def index
+    $favourite = false
     redirect_to(:action => 'display')
   end
 
-  def favourites
-    isFavourite = Favourite.find_by_article_id(params[:data])
-    if isFavourite.nil?
+  def isFavourite
+    status = Favourite.find_by_article_id(params[:data])
+    if status.nil?
       fav = Favourite.new(:user_id => session[:userid],
         :article_id => params[:data])
       if fav.save
@@ -26,6 +27,11 @@ class UserController < ApplicationController
         flash[:notice] = "Sorry, unable to update the favourites"
       end
     end
+  end
+
+  def favourites
+    $favourite = true
+    redirect_to(:action => 'display')
   end
 
   # Prepare Articles to be rendered by the view.
@@ -61,6 +67,10 @@ class UserController < ApplicationController
         end
       end
 
+    # Prepare Articles by favourites
+    elsif $favourite
+      prepareArticlesByFavourites
+
     # Prepare Articles by User Subscriptions
     else
       if @user_subscriptions.empty?
@@ -71,6 +81,7 @@ class UserController < ApplicationController
         end
       end
     end
+    $favourite = false
   end
 
   # Filters articles by sources and adds them to the array
@@ -107,6 +118,27 @@ class UserController < ApplicationController
         if !article.description.nil?
           text += article.description + "\n"
         end
+        @articles.push(UserProfile.new(article.url, article.urlToImage,
+          article.article_id, text))
+      end
+    end
+  end
+
+  # Filter articles by favourites and add them to the array
+  def prepareArticlesByFavourites
+    articleIds = Favourite.select(:article_id).where(:user_id => session[:userid])
+    articles = @apiParser.getArticlesByIds(articleIds)
+    if !articles.empty?
+      articles.each do |article|
+        text = ""
+        if !article.title.nil?
+          text += article.title + "\n"
+        end
+
+        if !article.description.nil?
+          text += article.description + "\n"
+        end
+
         @articles.push(UserProfile.new(article.url, article.urlToImage,
           article.article_id, text))
       end
