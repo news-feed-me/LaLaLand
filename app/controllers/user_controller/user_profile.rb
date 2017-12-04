@@ -14,11 +14,19 @@ class UserController
     end
 
     def outputHTML
-      htmlOutput = "<div class=\"article\">"+"<a href=\"#{@href}\" id=\"#{@id}\">\n"+
+      htmlOutput = "<div class=\"article\">"+"<a href=\"#{@href}\" id=\"#{@id}\" target=\"_blank\">\n"+
       "   <div class=\"article_image\">\n"+
       "     <img src=\"#{@src}\">\n </div>
       <div class=\"article_text\">"+
-              "#{@text}\n </div></a></div> "
+              "#{@text}\n </div></a>
+      <a href=\"\\user\\favourites\" target=\"_blank\"><img src=\"https://png.icons8.com/add-to-favorites/color/50/000000\"></a>
+      <a href=\"https://www.facebook.com/sharer/sharer.php?u=#{@href}\" target=\"_blank\">
+      <img src=\"https://png.icons8.com/facebook/color/50/000000\"></a>
+      <a href=\"https://twitter.com/intent/tweet?url=#{@href}\" target=\"_blank\">
+      <img src=\"https://png.icons8.com/twitter/color/50/000000\"></a>
+      <a href=\"https://plus.google.com/share?url=#{@href}\" target=\"_blank\">
+      <img src=\"https://png.icons8.com/google-plus/color/39/000000\"></a>
+      </div>"
       return htmlOutput
     end
 

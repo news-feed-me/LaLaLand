@@ -29,13 +29,6 @@
   <div class="articles">
     <% @articles.each do |article| %>
       <%= raw article.outputHTML %>
-      <div class="share-buttons">
-        <a href="https://www.facebook.com/sharer/sharer.php?
-        u=<%= raw article.link %>" target="_blank">
-        Facebook</a>
-        <a href="https://twitter.com/intent/tweet?url=<%= raw article.link %>" target="_blank">Tweet</a>
-        <a href="https://plus.google.com/share?url=<%= raw article.link %>" target="_blank">Google+</a>
-      </div>
     <%end%>
   </div>
 </div>

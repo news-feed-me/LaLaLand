@@ -8,6 +8,10 @@ class UserController < ApplicationController
     redirect_to(:action => 'display')
   end
 
+  def favourites
+    redirect_to(:action => 'display')
+  end
+
   # Prepare Articles to be rendered by the view.
   def display
     # Variables used by the view to display articles
