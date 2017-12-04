@@ -50,13 +50,10 @@ ActiveRecord::Schema.define(version: 20171202220047) do
   add_index "subscribes", ["user_id", "subscription_id"], name: "index_subscribes_on_user_id_and_subscription_id", using: :btree
 
   create_table "subscriptions", primary_key: "subscription_id", force: :cascade do |t|
-    t.string   "name",        limit: 255
+    t.string   "name",       limit: 255
     t.string   "url"
-    t.string   "description"
     t.string   "source_id"
-    t.string   "category",    limit: 255
-    t.string   "country",     limit: 255
-    t.string   "language",    limit: 255
+    t.string   "category",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
