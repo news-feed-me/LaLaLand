@@ -15,6 +15,7 @@ function changeColor(){
   return;
 }
 
+/*
 function favoriteClick(id, article_status){
 
   if (article_status == false){
@@ -30,3 +31,4 @@ function favoriteClick(id, article_status){
 
   return;
 }
+*/
