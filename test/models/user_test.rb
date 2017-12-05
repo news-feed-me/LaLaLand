@@ -102,5 +102,14 @@ test "invalid user duplicate user_name" do
       assert !u.valid?, "password too short validation failed"
       end
 
-
+    test "user not valid wrong email format" do
+        u = User.new(:first_name => "abcdef",
+        :last_name => "kalnglkn",
+        :user_name => "two123456",
+        :email => "1",
+        :birth_date => "11-11-11",
+        :country => "canada",
+      :password => "1234567890")
+        assert !u.valid?, "email validation failed"
+      end
 end
