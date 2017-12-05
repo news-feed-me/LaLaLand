@@ -1,16 +1,11 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
   test "invalid without a password" do
     u = users(:one)
     assert !u.valid?, "password present validation failed"
   end
-  #test "user should not save" do
-  #  assert true
-  #end
 
   test "valid user is valid" do
     u = User.new(:first_name => "abcdef",
@@ -23,16 +18,16 @@ class UserTest < ActiveSupport::TestCase
     assert u.valid?, "valid user failed"
   end
 
-test "user not valid username too short" do
-  u = User.new(:first_name => "abcdef",
-  :last_name => "kalnglkn",
-  :user_name => "name",
-  :email => "jjingg@ji.com",
-  :birth_date => "11-11-11",
-  :country => "canada",
-:password => "1234567890")
-  assert !u.valid?, "username too short validation failed"
-  end
+  test "user not valid username too short" do
+    u = User.new(:first_name => "abcdef",
+    :last_name => "kalnglkn",
+    :user_name => "name",
+    :email => "jjingg@ji.com",
+    :birth_date => "11-11-11",
+    :country => "canada",
+  :password => "1234567890")
+    assert !u.valid?, "username too short validation failed"
+    end
 
   test "invalid without a first_name" do
     u = User.new(
@@ -69,16 +64,16 @@ test "user not valid username too short" do
     assert !u.valid?, "last_name present validation failed"
   end
 
-test "invalid user duplicate user_name" do
-    u = User.new(:first_name => "abcdef",
-    :last_name => "kalnglkn",
-    :user_name => "one12345",
-    :email => "jjing@ji.com",
-    :birth_date => "11-11-11",
-    :country => "canada",
-  :password => "1234567890")
-    assert !u.valid?, "user_name unique validation failed"
-  end
+  test "invalid user duplicate user_name" do
+      u = User.new(:first_name => "abcdef",
+      :last_name => "kalnglkn",
+      :user_name => "one12345",
+      :email => "jjing@ji.com",
+      :birth_date => "11-11-11",
+      :country => "canada",
+    :password => "1234567890")
+      assert !u.valid?, "user_name unique validation failed"
+    end
 
   test "invalid user duplicate email" do
       u = User.new(:first_name => "abcdef",
