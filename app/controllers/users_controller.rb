@@ -88,7 +88,6 @@ class UsersController < ApplicationController
     @user_name = session[:user_name]
     @user = User.find_by_user_id(session[:userid])
     subscribes = User.find_by_user_id(@user.user_id).subscribes
-    end
     @subscriptions = Array.new(subscribes.size)
     i = 0
     subscribes.each do |subscribe|
