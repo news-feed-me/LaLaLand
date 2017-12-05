@@ -16,16 +16,17 @@
           <%= label_tag(ssub.name) %>
 
           <% thisSubscribe = Subscribe.find_by_subscription_id(ssub.subscription_id) %>
-
+          <div class="favoritesCheckBox">
           <% if thisSubscribe.favourite == true %>
 
-            <%= check_box_tag("favourites[]", thisSubscribe.subscription_id, :checked => true) %>
-            <%= label_tag("Favourite") %>
+              <%= check_box_tag("favourites[]", thisSubscribe.subscription_id, :checked => true) %>
+              <%= label_tag("Favourite") %>
           <% else %>
-            <%= check_box_tag("favourites[]", thisSubscribe.subscription_id) %>
-            <%= label_tag("Favourite") %>
-          <% end %>
+              <%= check_box_tag("favourites[]", thisSubscribe.subscription_id) %>
+              <%= label_tag("Favourite") %>
 
+          <% end %>
+        </div>
         </div>
 
 
@@ -48,4 +49,5 @@
 <p>
   <%= submit_tag "Update Subscriptions" %>
 </p>
+
 <% end %>
