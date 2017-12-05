@@ -30,7 +30,7 @@
     </div>
 
     <div class="sources">
-      <h> Your favourites: </h>
+      <h> Your favourite subscriptions: </h>
       <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
         <% @user_subscriptions.each do |subscription| %>
           <% thisSubscribe = Subscribe.find_by_subscription_id(subscription.subscription_id) %>
