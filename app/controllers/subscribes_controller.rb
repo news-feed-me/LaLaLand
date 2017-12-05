@@ -1,4 +1,5 @@
 class SubscribesController < ApplicationController
+  before_action :check_log_in
   def new
     @subscribe  = Subscribe.new
   end

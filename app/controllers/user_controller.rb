@@ -3,7 +3,7 @@ class UserController < ApplicationController
   layout 'user'
 
   include HTTParty
-
+  before_action :check_log_in
   def index
     redirect_to(:action => 'display')
   end

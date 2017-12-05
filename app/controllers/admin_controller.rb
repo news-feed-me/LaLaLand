@@ -2,7 +2,7 @@ class AdminController < ApplicationController
   layout "admin"
 
   include HTTParty
-
+  before_action :check_log_in
   def index
     @subscriptions = Subscription.all
   end
@@ -21,7 +21,7 @@ class AdminController < ApplicationController
 
     # Update subscriptions in the database.
     # if response is valid else Flash Invalid URL notice
-    if flag && response.success? && response.parsed_response.has_key? 'sources'
+    if flag && response.success?
       data = response.parsed_response
       # Populate most recent data
       add_to_database(data)
@@ -102,7 +102,7 @@ class AdminController < ApplicationController
         end
         flash[:notice] = "Sources added successfully!"
       end
-    end
+   end
 
     def subscription_params
       # same as using "params[:subscription]"", except that it:
