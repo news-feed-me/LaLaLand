@@ -27,6 +27,7 @@ class UserController < ApplicationController
         flash[:notice] = "Sorry, unable to update the favourites"
       end
     end
+    redirect_to(:action => 'display')
   end
 
   def favourites
