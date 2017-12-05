@@ -2,7 +2,7 @@
 
 # YOU NEED THIS;
 class UserController
-  class Article
+  class UserProfile
     attr_reader :href, :src, :id, :text
 
     # need to separate input with commas

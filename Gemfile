@@ -21,6 +21,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+# Schedule article updates every timeperiod
+gem 'rufus-scheduler'
+
 gem 'simple_form'
 #gem 'rails-footnotes', '>= 3.7.9' :group => :development
 gem 'bootstrap-sass', '~> 2.3.1.0'

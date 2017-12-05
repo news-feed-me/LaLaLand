@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   layout 'users'
 
-  require 'NewsAPI_Source'
-  include NewsAPI_Source
-
   before_action :check_log_in, :except => [:create, :new]
   $no_subscriptions = false
 
@@ -105,9 +102,11 @@ class UsersController < ApplicationController
     subscribes = User.find_by_user_id(@user.user_id).subscribes
     @subscriptions = Array.new(subscribes.size)
     i = 0
-    subscribes.each do |subscribe|
-      @subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
-      i += 1
+    if !subscribes.nil?
+      subscribes.each do |subscribe|
+        @subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
+        i += 1
+      end
     end
     @subs1 = Subscription.all
   end
