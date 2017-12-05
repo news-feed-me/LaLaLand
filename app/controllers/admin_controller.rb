@@ -21,7 +21,7 @@ class AdminController < ApplicationController
 
     # Update subscriptions in the database.
     # if response is valid else Flash Invalid URL notice
-    if flag && response.success? && response.parsed_response.has_key? 'sources'
+    if flag && response.success?
       data = response.parsed_response
       # Populate most recent data
       add_to_database(data)
