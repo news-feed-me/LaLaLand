@@ -1,0 +1,142 @@
+/* line 5, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+body {
+  background-color: #c6ecc6;
+}
+
+/* line 11, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#signup_subscription_list {
+  background-color: white;
+  margin-right: 11em;
+  margin-left: 10em;
+  padding-top: 3em;
+  padding-left: 3em;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 23, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#welcomeSignupLoginBox {
+  float: right;
+  display: inline;
+  margin-right: 2em;
+  margin-top: 1em;
+  padding: 1em 2em 1em 2em;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 10px 10px 10px grey;
+  background-color: white;
+}
+
+/* line 35, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#title {
+  float: left;
+  display: inline;
+  margin-left: 2em;
+}
+
+/* line 41, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#topBlock {
+  background: linear-gradient(to right, #33cc33, #009933);
+  padding-bottom: 2em;
+}
+
+/* line 46, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#usersSignupTable {
+  margin: auto;
+  width: 50%;
+  padding: 3em 3em 3em 3em;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 10px 10px 10px grey;
+  background-color: white;
+}
+
+/* line 60, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+td {
+  position: relative;
+  left: 6em;
+  border-color: white;
+  border-width: 1em;
+  border-style: solid;
+}
+
+/* line 68, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+tr {
+  border-color: white;
+  border-width: 1em;
+  border-style: solid;
+}
+
+/* line 74, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#error_explanation {
+  color: red;
+}
+
+/* line 78, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
+}
+
+/* line 87, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+.form-control {
+  color: red;
+}
+
+/* line 91, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuBar {
+  margin-bottom: 2em;
+  margin-left: 8em;
+}
+
+/* line 96, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+.menu {
+  display: inline;
+  border-style: solid;
+  border-width: 3px;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  background-color: white;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 109, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuHome:hover {
+  background-color: #ff3377;
+}
+
+/* line 113, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuEditAccount:hover {
+  background-color: #ff3377;
+}
+
+/* line 117, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuSubscriptions:hover {
+  background-color: #ff3377;
+}
+
+/* line 121, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuFavorites:hover {
+  background-color: #ff3377;
+}
+
+/* line 125, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuLogOut:hover {
+  background-color: #ff3377;
+}
+
+/* line 129, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+a {
+  text-decoration: none;
+  color: #00cc00;
+}
+
+/* line 134, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+.favoritesCheckBox {
+  color: green;
+  float: right;
+  margin-right: 25em;
+}
