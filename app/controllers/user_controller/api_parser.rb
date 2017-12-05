@@ -86,7 +86,7 @@ class UserController
       articles = Array.new
       if !articleIds.empty?
         articleIds.each do |article|
-          articles += Article.find_by_article_id(article.article_id)
+          articles.push(Article.find_by_article_id(article.article_id))
         end
       end
       return articles

@@ -132,16 +132,16 @@ class UserController < ApplicationController
     if !articles.empty?
       articles.each do |article|
         text = ""
-        if !article.title.nil?
-          text += article.title + "\n"
+        if article.has_attribute?(:title)
+          text += article[:title] + "\n"
         end
 
-        if !article.description.nil?
-          text += article.description + "\n"
+        if article.has_attribute?(:description)
+          text += article[:description] + "\n"
         end
 
-        @articles.push(UserProfile.new(article.url, article.urlToImage,
-          article.article_id, text))
+        @articles.push(UserProfile.new(article[:url], article[:urlToImage],
+          article[:article_id], text))
       end
     end
   end
