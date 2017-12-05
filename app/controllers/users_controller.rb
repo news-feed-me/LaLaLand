@@ -58,12 +58,26 @@ class UsersController < ApplicationController
         Subscribe.delete_all(:user_id => @user.user_id)
         params['sources'].each do |source|
           subscribe = Subscribe.new(:user_id => @user.user_id,
-          :subscription_id => Subscription.find_by_name(source).subscription_id)
-          if subscribe.save
-            # Do nothing
-          else
-            render action: "edit_subscriptions"
+            :subscription_id => Subscription.find_by_name(source).subscription_id)
+          if params.has_key?('favourites')
+          params['favourites'].each do |fav|
+            if subscribe.subscription_id == Subscription.find_by_subscription_id(fav).subscription_id
+              subscribe.favourite = true
+            else
+              #subscribe.favourite = true
+            end
+
           end
+
+        end
+
+
+            if subscribe.save
+              # Do nothing
+            else
+              render action: "edit_subscriptions"
+            end
+
         end
         flash[:notice] = "Subscriptions edited successfully"
         redirect_to(:controller => 'user', :action => 'display')
@@ -92,6 +106,23 @@ class UsersController < ApplicationController
       subscribes.each do |subscribe|
         @subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
         i += 1
+      end
+    end
+    @subs1 = Subscription.all
+  end
+
+  def favourites
+    $no_favourites = true
+    @user_name = session[:user_name]
+    @user = User.find_by_user_id(session[:userid])
+    subscribes = User.find_by_user_id(@user.user_id).subscribes
+    @subscriptions = Array.new(subscribes.size)
+    i = 0
+    subscribes.each do |subscribe|
+      if(subscribe.favourite == true)
+        @subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
+        i += 1
+        $no_favourites = false
       end
     end
     @subs1 = Subscription.all

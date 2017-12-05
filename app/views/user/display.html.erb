@@ -12,7 +12,7 @@
           <%= radio_button_tag(:category, category) %>
           <%= label_tag(:category, category.capitalize) %>
           <p>
-        <%end  %>
+        <% end  %>
         <%= submit_tag("Apply Filter") %>
       <% end %>
     </div>
@@ -28,6 +28,22 @@
         <%= submit_tag("Apply Filter") %>
       <% end %>
     </div>
+
+    <div class="sources">
+      <h> Your favourites: </h>
+      <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
+        <% @user_subscriptions.each do |subscription| %>
+          <% thisSubscribe = Subscribe.find_by_subscription_id(subscription.subscription_id) %>
+          <% if thisSubscribe.favourite == true %>
+            <%= check_box_tag("sources[]", subscription.name, :checked => true) %>
+            <%= label_tag(subscription.name.capitalize) %>
+          <% end %>
+          <p>
+        <%end  %>
+        <%= submit_tag("Apply Filter") %>
+      <% end %>
+    </div>
+
   </div>
 
   <div class="articles">
