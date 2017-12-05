@@ -1,0 +1,23 @@
+/* line 1, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/welcome.scss */
+body {
+  background: #c6ecc6;
+}
+
+/* line 5, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/welcome.scss */
+#welcomeSignupLoginBox {
+  width: fixed;
+  margin-left: 10em;
+  margin-right: 10em;
+  padding-left: 22em;
+  padding-top: 10em;
+}
+
+/* line 13, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/welcome.scss */
+#loginTab {
+  display: inline;
+}
+
+/* line 17, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/welcome.scss */
+#signupTab {
+  display: inline;
+}

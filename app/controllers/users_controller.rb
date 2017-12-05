@@ -1,19 +1,22 @@
 class UsersController < ApplicationController
   layout 'users'
 
-  require 'NewsAPI_Source'
-  include NewsAPI_Source
-
   before_action :check_log_in, :except => [:create, :new]
   $no_subscriptions = false
 
   def new
+    @page_title = "Signup"
     @user = User.new
     @subs1 = Subscription.all
+    render :layout => nil
   end
 
   def create
     @subs1 = Subscription.all
+<<<<<<< HEAD
+=======
+    @user_name = session[:user_name]
+>>>>>>> 5ac9e2916038773597b4fa08d11aeb8820751249
     @user = User.new(user_params)
     if @user.valid? and params['sources']
       if @user.save
@@ -37,7 +40,7 @@ class UsersController < ApplicationController
       else
         $no_subscriptions = false
       end
-     render action: "new", notice: "Signup errors"
+     render action: "new", layout: nil, notice: "Signup errors"
     end
   end
 
@@ -60,6 +63,19 @@ class UsersController < ApplicationController
         params['sources'].each do |source|
           subscribe = Subscribe.new(:user_id => @user.user_id,
             :subscription_id => Subscription.find_by_name(source).subscription_id)
+          if params.has_key?('favourites')
+          params['favourites'].each do |fav|
+            if subscribe.subscription_id == Subscription.find_by_subscription_id(fav).subscription_id
+              subscribe.favourite = true
+            else
+              #subscribe.favourite = true
+            end
+
+          end
+
+        end
+
+
             if subscribe.save
               # Do nothing
             else
@@ -90,9 +106,28 @@ class UsersController < ApplicationController
     subscribes = User.find_by_user_id(@user.user_id).subscribes
     @subscriptions = Array.new(subscribes.size)
     i = 0
+    if !subscribes.nil?
+      subscribes.each do |subscribe|
+        @subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
+        i += 1
+      end
+    end
+    @subs1 = Subscription.all
+  end
+
+  def favourites
+    $no_favourites = true
+    @user_name = session[:user_name]
+    @user = User.find_by_user_id(session[:userid])
+    subscribes = User.find_by_user_id(@user.user_id).subscribes
+    @subscriptions = Array.new(subscribes.size)
+    i = 0
     subscribes.each do |subscribe|
-      @subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
-      i += 1
+      if(subscribe.favourite == true)
+        @subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
+        i += 1
+        $no_favourites = false
+      end
     end
     @subs1 = Subscription.all
   end
