@@ -8,11 +8,17 @@
     <head> SUBSCRIPTIONS: </head>
     <br><br>
       <% @subs1.each do |ssub| %>
+
         <% if @subscriptions.include?(ssub) %>
+        <div id = "mySubscriptions">
+
           <%= check_box_tag("sources[]", ssub.name, :checked => true) %>
           <%= label_tag(ssub.name) %>
+
           <% thisSubscribe = Subscribe.find_by_subscription_id(ssub.subscription_id) %>
+
           <% if thisSubscribe.favourite == true %>
+
             <%= check_box_tag("favourites[]", thisSubscribe.subscription_id, :checked => true) %>
             <%= label_tag("Favourite") %>
           <% else %>
@@ -20,11 +26,18 @@
             <%= label_tag("Favourite") %>
           <% end %>
 
+        </div>
+
+
+
+        <div>
         <% else %>
           <%= check_box_tag("sources[]", ssub.name ) %>
           <%= label_tag(ssub.name) %>
+        </div>
 
         <% end %>
+
     <p>
       <% end  %>
 

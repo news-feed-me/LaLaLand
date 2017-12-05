@@ -112,6 +112,23 @@ class UsersController < ApplicationController
     @subs1 = Subscription.all
   end
 
+  def favourites
+    $no_favourites = true
+    @user_name = session[:user_name]
+    @user = User.find_by_user_id(session[:userid])
+    subscribes = User.find_by_user_id(@user.user_id).subscribes
+    @subscriptions = Array.new(subscribes.size)
+    i = 0
+    subscribes.each do |subscribe|
+      if(subscribe.favourite == true)
+        @subscriptions[i] = Subscription.find_by_subscription_id(subscribe.subscription_id)
+        i += 1
+        $no_favourites = false
+      end
+    end
+    @subs1 = Subscription.all
+  end
+
   private
     def user_params
       params.require(:user).permit(:first_name, :last_name, :user_name, :email, :birth_date,

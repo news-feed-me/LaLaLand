@@ -1,0 +1,27 @@
+<%= simple_form_for @user do |entry| %>
+<%= render 'shared/error_messages' %>
+<div id="signup_subscription_list">
+  <table>
+    <%if $no_subscriptions %>
+    <p style ="color:red;"> **You must subscribe to atleast one news channel** </p>
+    <% end %>
+    <head> FAVOURITES: </head>
+    <br>
+    <% if $no_favourites == false %>
+      <% @subs1.each do |ssub| %>
+        <% if @subscriptions.include?(ssub) %>
+          <%= ssub.name %>
+        <% end %>
+
+        <p>
+        <% end  %>
+    <% else %>
+      <p style ="color:red;"> **No favourite subscriptions** </p>
+    <% end %>
+
+  </table>
+
+</div>
+
+
+<% end %>
