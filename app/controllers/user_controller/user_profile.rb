@@ -21,12 +21,10 @@ class UserController
 
     def favourites
       if getStatus
-        return
-        "<a href=\"\\user\\isFavourite\" >
+        return "<a href=\"\\user\\isFavourite\\#{@id}\" >
         <img src=\"https://png.icons8.com/add-to-favorites/ultraviolet/25/000000\"></a>"
       else
-        return
-        "<a href=\"\\user\\isFavourite\">
+        return "<a href=\"\\user\\isFavourite\\#{@id}\" >
         <img src=\"https://png.icons8.com/add-to-favorites/ios7/25/000000\"></a>"
       end
     end

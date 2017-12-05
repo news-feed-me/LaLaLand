@@ -11,17 +11,17 @@ class UserController < ApplicationController
   end
 
   def isFavourite
-    status = Favourite.find_by_article_id(params[:data])
+    status = Favourite.find_by_article_id(params[:id].to_i)
     if status.nil?
       fav = Favourite.new(:user_id => session[:userid],
-        :article_id => params[:data])
+        :article_id => params[:id].to_i)
       if fav.save
         # Do Nothing
       else
         flash[:notice] = "Sorry, unable to add to favourites."
       end
     else
-      if fav.destroy
+      if status.destroy
         # Do nothing
       else
         flash[:notice] = "Sorry, unable to update the favourites"
