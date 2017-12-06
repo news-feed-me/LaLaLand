@@ -1,3 +1,7 @@
+<html>
+  <head>
+    <%= javascript_include_tag 'user' %>
+  </head>
 <body>
 <div class="content">
   <div class = "filter">
@@ -17,17 +21,16 @@
       <h> Your subscriptions: </h>
       <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
         <% @user_subscriptions.each do |subscription| %>
-
-        <%= check_box_tag("sources[]", subscription.name) %>
-        <%= label_tag(subscription.name.capitalize) %>
+          <%= check_box_tag("sources[]", subscription.name) %>
+          <%= label_tag(subscription.name.capitalize) %>
           <p>
         <%end  %>
         <%= submit_tag("Apply Filter") %>
       <% end %>
     </div>
 
-    <div class="sources">
-      <h> Your favourites: </h>
+    <div class="favourites">
+      <h> Your favourite subscriptions: </h>
       <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
         <% @user_subscriptions.each do |subscription| %>
           <% thisSubscribe = Subscribe.find_by_subscription_id(subscription.subscription_id) %>
@@ -45,8 +48,14 @@
 
   <div class="articles">
     <% @articles.each do |article| %>
-    <%= raw article.outputHTML %>
+      <div class="article">
+        <%= raw article.outputHTML %>
+        <%= raw article.favourites %>
+        <%= raw article.share_buttons %>
+      </div>
     <%end%>
   </div>
 </div>
 </body>
+
+</html>

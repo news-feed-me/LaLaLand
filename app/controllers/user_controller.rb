@@ -3,8 +3,36 @@ class UserController < ApplicationController
   layout 'user'
 
   include HTTParty
+  $favourite = false
   before_action :check_log_in
+
   def index
+    $favourite = false
+    redirect_to(:action => 'display')
+  end
+
+  def isFavourite
+    status = Favourite.find_by_article_id(params[:id].to_i)
+    if status.nil?
+      fav = Favourite.new(:user_id => session[:userid],
+        :article_id => params[:id].to_i)
+      if fav.save
+        # Do Nothing
+      else
+        flash[:notice] = "Sorry, unable to add to favourites."
+      end
+    else
+      if status.destroy
+        # Do nothing
+      else
+        flash[:notice] = "Sorry, unable to update the favourites"
+      end
+    end
+    redirect_to(:action => 'display')
+  end
+
+  def favourites
+    $favourite = true
     redirect_to(:action => 'display')
   end
 
@@ -12,7 +40,7 @@ class UserController < ApplicationController
   def display
     # Variables used by the view to display articles
     @user_name = session[:user_name]
-    @apiParser = ApiParser.new(@user_name)
+    @apiParser = ApiParser.new(session[:userid])
     @user_subscriptions = @apiParser.getSubscriptions
     @categories = @apiParser.getCategories
     @sources = Array.new
@@ -41,6 +69,10 @@ class UserController < ApplicationController
         end
       end
 
+    # Prepare Articles by favourites
+    elsif $favourite
+      prepareArticlesByFavourites
+
     # Prepare Articles by User Subscriptions
     else
       if @user_subscriptions.empty?
@@ -51,6 +83,7 @@ class UserController < ApplicationController
         end
       end
     end
+    $favourite = false
   end
 
   # Filters articles by sources and adds them to the array
@@ -89,6 +122,27 @@ class UserController < ApplicationController
         end
         @articles.push(UserProfile.new(article.url, article.urlToImage,
           article.article_id, text))
+      end
+    end
+  end
+
+  # Filter articles by favourites and add them to the array
+  def prepareArticlesByFavourites
+    articleIds = Favourite.select(:article_id).where(:user_id => session[:userid])
+    articles = @apiParser.getArticlesByIds(articleIds)
+    if !articles.empty?
+      articles.each do |article|
+        text = ""
+        if article.has_attribute?(:title)
+          text += article[:title] + "\n"
+        end
+
+        if article.has_attribute?(:description)
+          text += article[:description] + "\n"
+        end
+
+        @articles.push(UserProfile.new(article[:url], article[:urlToImage],
+          article[:article_id], text))
       end
     end
   end

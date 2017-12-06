@@ -4,6 +4,9 @@
     <title>FeedMe | <%= @page_title || @user_name %></title>
     <%= stylesheet_link_tag 'user' %>
     <%= javascript_include_tag 'user' %>
+    <!-- Add icon library -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div id="header">
@@ -13,7 +16,7 @@
         <li class="navi" id="naviHome"><a id="links", href="\user\display">Home</a></li>
         <li class="navi" id="naviProfile"><a id="links", href="\users\user_profile">Edit Account</a></li>
         <li class="navi" id="naviSubscribe"><a id="links", href="\users\edit_subscriptions">My Subscriptions</a></li>
-        <li class="navi" id="naviFavorites"><a id="links", href="\users\favourites">Favourites</a></li>
+        <li class="navi" id="naviFavorites"><a id="links", href="\user\favourites">Favourite Articles</a></li>
         <li class="navi" id="naviLogOut"><a id="links", href="\access\logout">Logout</a></li>
         <div class="search_bar">
           <%= form_tag('/user/display', :method => "get", id: "search-form") do %>
@@ -22,7 +25,6 @@
           <% end %>
         </div>
       </div>
-
       <div id="main">
         <div id="content">
           <!-- before yield -->

@@ -32,3 +32,4 @@ function favoriteClick(id, article_status){
   return;
 }
 */
+;

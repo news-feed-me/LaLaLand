@@ -14,12 +14,36 @@ class UserController
     end
 
     def outputHTML
-          htmlOutput = "<div class=\"article\">"+"<a href=\"#{@href}\" id=\"#{@id}\">\n"+
-          "   <div class=\"article_image\">\n"+
-          "     <img src=\"#{@src}\">\n </div>
-          <div class=\"article_text\">"+
-                  "#{@text}\n </div></a></div> "
-          return htmlOutput
+      return "<a href=\"#{@href}\" id=\"#{@id}\" target=\"_blank\">\n"+
+      "<div class=\"article_image\"> \n" + "<img src=\"#{@src}\">\n </div>
+      <div class=\"article_text\">" + "#{@text}\n </div></a>"
+    end
+
+    def favourites
+      if getStatus
+        return "<a href=\"\\user\\isFavourite\\#{@id}\" >
+        <img src=\"https://png.icons8.com/add-to-favorites/ultraviolet/25/000000\"></a>"
+      else
+        return "<a href=\"\\user\\isFavourite\\#{@id}\" >
+        <img src=\"https://png.icons8.com/add-to-favorites/ios7/25/000000\"></a>"
+      end
+    end
+
+    def share_buttons
+      "<a href=\"https://www.facebook.com/sharer/sharer.php?u=#{@href}\" target=\"_blank\">
+      <img src=\"https://png.icons8.com/facebook/color/25/000000\"></a>
+      <a href=\"https://twitter.com/intent/tweet?url=#{@href}\" target=\"_blank\">
+      <img src=\"https://png.icons8.com/twitter/color/25/000000\"></a>
+      <a href=\"https://plus.google.com/share?url=#{@href}\" target=\"_blank\">
+      <img src=\"https://png.icons8.com/google-plus/color/25/000000\"></a>"
+    end
+
+    def getStatus
+      if Favourite.find_by_article_id(@id).nil?
+        return false
+      else
+        return true
+      end
     end
   end
 end

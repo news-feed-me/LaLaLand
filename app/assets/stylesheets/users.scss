@@ -6,6 +6,8 @@ body {
   background-color: rgb(198, 236, 198);
 }
 
+
+
 #signup_subscription_list{
   background-color: white;
   margin-right: 11em;
@@ -127,4 +129,10 @@ tr {
 a{
   text-decoration: none;
   color: #00cc00;
+}
+
+.favoritesCheckBox{
+  color: green;
+  float: right;
+  margin-right: 25em;
 }
