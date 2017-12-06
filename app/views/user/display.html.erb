@@ -29,7 +29,7 @@
       <% end %>
     </div>
 
-    <div class="sources">
+    <div class="favourites">
       <h> Your favourite subscriptions: </h>
       <%= form_tag('/user/display',id: "articles_input", method: "get") do %>
         <% @user_subscriptions.each do |subscription| %>

@@ -142,6 +142,20 @@ body {
   border-width: 3px;
 }
 
+.favourites {
+  color: white;
+  display: flex;
+  //margin:auto;
+  flex-direction: column;
+  background-color: #355c7d;
+  //background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border-style: solid;
+  //box-shadow: 10px 10px 10px grey;
+  margin-top: 1em;
+  border-color: black;
+  border-width: 3px;
+}
+
 .articles {
   margin: auto;
   width: 65%;
@@ -241,14 +255,4 @@ a{
 
 h1{
   margin-left: 1em;
-}
-
-.social-share-button-facebook {
- postition: relative;
- border-color: black;
- border-style: solid;
- margin-left: 50px;
- width: 200px;
- height: 16px;
- background: url("/social/facebook.png") no-repeat;
 }

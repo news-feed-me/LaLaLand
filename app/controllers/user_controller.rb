@@ -4,6 +4,7 @@ class UserController < ApplicationController
 
   include HTTParty
   $favourite = false
+  before_action :check_log_in
 
   def index
     $favourite = false
