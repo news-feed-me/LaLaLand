@@ -1,7 +1,7 @@
 class UserController
   class ApiParser
-    def initialize(user_id)
-      @user_id = user_id
+    def initialize(userid)
+      @userid = userid
     end
 
     def getSubscriptions
@@ -98,7 +98,7 @@ class UserController
 
     private
       def getSubscribes
-        return User.find_by_user_id(@user_id).subscribes
+        return User.find_by_user_id(@userid).subscribes
       end
   end
 end
