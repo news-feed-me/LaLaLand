@@ -1,11 +1,11 @@
 class UserController
   class ApiParser
-    def initialize(userName)
-      @userName = userName
+    def initialize(user_id)
+      @user_id = user_id
     end
 
     def getSubscriptions
-      subscribes = getSubscribes(getUser)
+      subscribes = getSubscribes
       subscriptions = Array.new(subscribes.size)
 
       i = 0
@@ -97,12 +97,8 @@ class UserController
     end
 
     private
-      def getUser
-        return User.find_by_user_name(@userName).user_id
-      end
-
-      def getSubscribes(userId)
-        return User.find_by_user_id(userId).subscribes
+      def getSubscribes
+        return User.find_by_user_id(@user_id).subscribes
       end
   end
 end
