@@ -40,7 +40,7 @@ class UserController < ApplicationController
   def display
     # Variables used by the view to display articles
     @user_name = session[:user_name]
-    @apiParser = ApiParser.new(@user_name)
+    @apiParser = ApiParser.new(session[:userid])
     @user_subscriptions = @apiParser.getSubscriptions
     @categories = @apiParser.getCategories
     @sources = Array.new
