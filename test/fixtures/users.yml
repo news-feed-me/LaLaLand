@@ -11,6 +11,7 @@ one:
   email: one@sfu.ca
   birth_date: 11-11-11
   country: canada
+  password_digest: <%=User.digest('password')%>
 
 two:
   first_name : abcde
@@ -19,6 +20,6 @@ two:
   email: two@sfu.ca
   birth_date: 11-11-11
   country: canada
-
+  password_digest: <%=User.digest('password')%>
 
 #  column: value
