@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get 'users/new'
 
   get "users/new", to: "users#new", as: :signup
-  get "users/login", to: "access#login", as: :login
+  get "access/login", to: "access#login", as: :login
+  post 'access/attempt_login', to:"access#attempt_login", as: :attempt_login
   get "welcome/index", to: "welcome#index", as: :home
   get "access/logout", to: "access#logout", as: :logout
   get 'access/index', to: "access#index", as: :access_index
