@@ -9,9 +9,9 @@ one:
   last_name: kalnglkn
   user_name: one12345
   email: one@sfu.ca
-  birth_date: 11-11-11
+  birth_date: 2017-11-11
   country: canada
-  password_digest: <%=User.digest('correctpassword')%>
+  password_digest: <%= User.digest('correctpassword') %>
 
 two:
   first_name : abcde
