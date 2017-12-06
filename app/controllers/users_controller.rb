@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    puts "#{params}"
     @subs1 = Subscription.all
     @user_name = session[:user_name]
     @user = User.new(user_params)
