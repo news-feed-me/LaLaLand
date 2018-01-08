@@ -22,20 +22,20 @@ class UserController
     def favourites
       if getStatus
         return "<a href=\"\\user\\isFavourite\\#{@id}\" >
-        <img src=\"https://png.icons8.com/add-to-favorites/ultraviolet/25/000000\"></a>"
+        <img src=\"https://png.icons8.com/ultraviolet/25/000000/add-to-favorites.png\"></a>"
       else
         return "<a href=\"\\user\\isFavourite\\#{@id}\" >
-        <img src=\"https://png.icons8.com/add-to-favorites/ios7/25/000000\"></a>"
+        <img src=\"https://png.icons8.com/ios/25/000000/add-to-favorites.png\"></a>"
       end
     end
 
     def share_buttons
       "<a href=\"https://www.facebook.com/sharer/sharer.php?u=#{@href}\" target=\"_blank\">
-      <img src=\"https://png.icons8.com/facebook/color/25/000000\"></a>
+      <img src=\"https://png.icons8.com/color/25/000000/facebook.png\"></a>
       <a href=\"https://twitter.com/intent/tweet?url=#{@href}\" target=\"_blank\">
-      <img src=\"https://png.icons8.com/twitter/color/25/000000\"></a>
+      <img src=\"https://png.icons8.com/color/25/000000/twitter.png\"></a>
       <a href=\"https://plus.google.com/share?url=#{@href}\" target=\"_blank\">
-      <img src=\"https://png.icons8.com/google-plus/color/25/000000\"></a>"
+      <img src=\"https://png.icons8.com/color/25/000000/google-plus.png\"></a>"
     end
 
     def getStatus
