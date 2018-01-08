@@ -14,4 +14,10 @@ class Subscription < ActiveRecord::Base
   scope :searchCategory, lambda { |query|
     where("category ILIKE ?", "%#{query}%")
   }
+
+  validates_presence_of :name
+  validates_presence_of :url
+  validates_presence_of :source_id
+
+
 end

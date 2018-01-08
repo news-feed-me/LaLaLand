@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include BCrypt
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_secure_password
@@ -35,5 +37,9 @@ class User < ActiveRecord::Base
   validates_length_of :country, :maximum => 255
 
   #validates_presence_of :subscribes
+  def self.digest(pass)
+    return Password.create(pass)
+  end
+
 
 end

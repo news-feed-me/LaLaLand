@@ -49,6 +49,7 @@ class UsersController < ApplicationController
   def user_profile
     @user_name = session[:user_name]
     @user = User.find_by_user_id(session[:userid])
+
   end
 
   def update
@@ -128,6 +129,7 @@ class UsersController < ApplicationController
     @subs1 = Subscription.all
   end
 
+
   private
     def user_params
       params.require(:user).permit(:first_name, :last_name, :user_name, :email, :birth_date,
@@ -137,4 +139,5 @@ class UsersController < ApplicationController
     def profile
       @user = User.all
     end
+
 end

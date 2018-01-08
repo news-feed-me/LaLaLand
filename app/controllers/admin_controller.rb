@@ -2,7 +2,7 @@ class AdminController < ApplicationController
   layout "admin"
 
   include HTTParty
-
+  before_action :check_log_in
   def index
     @subscriptions = Subscription.all
   end
@@ -102,7 +102,7 @@ class AdminController < ApplicationController
         end
         flash[:notice] = "Sources added successfully!"
       end
-    end
+   end
 
     def subscription_params
       # same as using "params[:subscription]"", except that it:
