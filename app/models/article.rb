@@ -12,9 +12,20 @@ class Article < ActiveRecord::Base
 
   # Update the articles in the database every time period
   def self.updateArticles
+    self.deleteArticles
     subscriptions = Subscription.all
     subscriptions.each do |subscription|
       self.update(subscription.source_id)
+    end
+  end
+
+  # Delete articles not subscribed
+  def self.deleteArticles
+    articles = Article.all
+    articles.each do |article|
+      if Favourite.find_by_article_id(article.article_id).nil?
+        Article.destroy(article.article_id)
+      end
     end
   end
 
