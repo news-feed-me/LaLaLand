@@ -1,0 +1,1204 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+
+
+
+ */
+
+
+@import "social-share-button";
+/* line 6, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.favoriteButtons {
+  display: inline;
+  float: right;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  background-color: yellow;
+  margin-left: 35em;
+}
+
+/* line 15, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+body {
+  width: fixed;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
+  background-color: #c6ecc6;
+  margin-left: 1.75em;
+  margin-right: 1.75em;
+  margin-top: 1em;
+}
+
+/* line 29, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#header {
+  background-color: #355c7d;
+  color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
+
+/* line 40, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.naviBar {
+  padding: 15px 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  background-color: #355c7d;
+  width: auto;
+  border-color: black;
+}
+
+/* line 52, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.navi {
+  display: block;
+  float: left;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  border-style: solid;
+  border-color: black;
+  border-left-style: none;
+}
+
+/* line 66, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#naviHome {
+  border-color: black;
+  border-left-style: solid;
+}
+
+/* line 71, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#naviHome:hover {
+  background-color: #3333ff;
+}
+
+/* line 75, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#naviProfile:hover {
+  background-color: #3333ff;
+}
+
+/* line 79, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#naviSubscribe:hover {
+  background-color: #3333ff;
+}
+
+/* line 83, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#naviFavorites:hover {
+  background-color: #3333ff;
+}
+
+/* line 87, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#naviLogOut:hover {
+  background-color: #3333ff;
+}
+
+/* line 91, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.content {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 99%;
+  display: flex;
+  background-color: white;
+  margin-top: 10px;
+  border-style: solid;
+  border-color: black;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+/* line 105, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.search_bar {
+  padding: 14px 16px;
+  margin: auto;
+  float: right;
+  shape-outside: border-box;
+  margin-right: 5em;
+}
+
+/* line 113, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.filters {
+  background-color: white;
+}
+
+/* line 117, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.category {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  color: white;
+  background-color: #355c7d;
+  text-align: left;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+}
+
+/* line 131, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.sources {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #355c7d;
+  border-style: solid;
+  margin-top: 1em;
+  border-color: black;
+  border-width: 3px;
+}
+
+/* line 145, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.favourites {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #355c7d;
+  border-style: solid;
+  margin-top: 1em;
+  border-color: black;
+  border-width: 3px;
+}
+
+/* line 159, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.articles {
+  margin: auto;
+  width: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 175, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.article {
+  border: solid 1px;
+  background-color: white;
+  border-color: grey;
+  border-radius: 5px;
+  width: 98%;
+  flex-direction: row;
+  /*this section is for the article subelements */
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+  text-align: center;
+  color: black;
+}
+
+/* line 191, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.article_image {
+  width: 100%;
+}
+
+/* line 195, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.article_image > img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* line 200, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.article_text {
+  width: 90%;
+  color: black;
+  text-align: center;
+  padding: 15px 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* line 209, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+.footer {
+  width: 100%;
+  height: 200px;
+  margin: auto;
+}
+
+/* line 215, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#links {
+  color: white;
+}
+
+/* line 219, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+a {
+  color: green;
+  text-decoration: none;
+}
+
+/* line 224, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#pink {
+  background-color: white;
+  width: 5em;
+}
+
+/* line 229, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#mainBlock {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border-color: black;
+  border-style: solid;
+  background-color: white;
+  border-width: 2px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 240, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#button1:hover {
+  background-color: #ff5050;
+}
+
+/* line 243, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#button2:hover {
+  background-color: #ff5050;
+}
+
+/* line 246, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#button3:hover {
+  background-color: #ff5050;
+}
+
+/* line 249, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#button4:hover {
+  background-color: #ff5050;
+}
+
+/* line 252, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+#button5:hover {
+  background-color: #ff5050;
+}
+
+/* line 256, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/user.scss */
+h1 {
+  margin-left: 1em;
+}
+/* Admin Stylesheet */
+/* Structure */
+/* line 5, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 10, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+body {
+  width: 100%;
+  min-width: 980px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 14px Verdana, Lucida, Arial, Helvetica, sans-serif;
+  color: #332318;
+}
+
+/* line 20, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+p, td, ul, ol, li, dl, dt, dd {
+  font-family: Verdana, Lucida, Arial, Helvetica, sans-serif;
+}
+
+/* line 24, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+img {
+  border: none;
+}
+
+/* line 28, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 32, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+table tr th, table tr td {
+  vertical-align: top;
+  text-align: left;
+  padding: 3px;
+}
+
+/* line 38, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a, a:visited {
+  color: #993120;
+}
+
+/* line 42, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.clear {
+  clear: both;
+}
+
+/* line 46, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.center {
+  text-align: center;
+}
+
+/* line 50, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#header {
+  height: 4em;
+  padding-top: 1em;
+  text-align: center;
+  background: #993120;
+  color: #FFFFFF;
+}
+
+/* line 58, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 63, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#main {
+  min-height: 500px;
+  background: #F2DC87;
+}
+
+/* line 68, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#navigation {
+  float: left;
+  width: 180px;
+  min-height: 480px;
+  padding: 10px;
+  background: #94B26F;
+  color: #4C2516;
+}
+
+/* line 77, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#footer {
+  clear: both;
+  height: 2.5em;
+  text-align: right;
+  background: #4C2516;
+  color: #F2DC87;
+}
+
+/* line 85, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#footer p {
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+/* Navigation */
+/* line 91, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 97, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#navigation ul li {
+  margin-bottom: 0.5em;
+}
+
+/* line 101, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#navigation ul ul {
+  margin: 0.5em 0 0 1em;
+  font-size: 0.9em;
+}
+
+/* line 106, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#navigation a {
+  text-decoration: none;
+  padding: 1px 3px;
+}
+
+/* line 111, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#navigation a:hover {
+  background: #F2DC87;
+}
+
+/* line 115, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#content {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* line 120, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#content h2 {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 125, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.login form {
+  margin: 100px 250px;
+}
+
+/* line 129, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.menu .identity {
+  text-align: center;
+}
+
+/* line 133, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.menu ul {
+  margin: 3em 250px;
+  list-style: none;
+}
+
+/* line 138, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.menu ul li {
+  margin-bottom: 1em;
+}
+
+/* line 142, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 146, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* large action buttons* */
+/* line 151, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a.action {
+  float: right;
+  padding: 2px 5px;
+  margin: 0 0 1em 1em;
+  background: #94B26F;
+  color: #4C2516;
+  border: 1px solid #4C2516;
+  text-decoration: none;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* line 163, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+a.action:hover {
+  background: #B6D491;
+}
+
+/* small action buttons */
+/* line 168, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.actions {
+  width: 200px;
+}
+
+/* line 172, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.actions a.action {
+  float: left;
+  min-width: 3.5em;
+  padding: 1px 2px;
+  matgin: 2px 5px;
+  font-size: 0.7em;
+}
+
+/* CRUD */
+/* line 181, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.notice {
+  height: 1.25em;
+  padding: 0.5em;
+  text-align: center;
+  background: #B6D491;
+  color: #4C2516;
+}
+
+/* line 189, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.back-link {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+/* line 194, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.form-buttons {
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* line 199, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.index table {
+  text-align: center;
+  white-space: nowrap;
+  clear: both;
+  width: 100%;
+}
+
+/* line 206, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.index table tr td {
+  border: 1px solid #666666;
+}
+
+/* line 210, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.show table {
+  clear: both;
+  margin: 0 200px;
+  width: 300px;
+}
+
+/* line 216, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.show table .wide {
+  width: 600px;
+  margin: 0 50px;
+}
+
+/* line 221, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.show table tr th {
+  white-space: nowrap;
+  padding-right: 5px;
+}
+
+/* line 226, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.show table tr td {
+  border: 1px solid #666666;
+}
+
+/* line 230, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.edit table, .new table {
+  margin: 0 auto;
+}
+
+/* line 234, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.section + .section {
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+  border-top: 1px dotted #666666;
+}
+
+/* status_tag */
+/* line 241, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+spa.status {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0.25em auto;
+  padding: 0;
+  border: 1px solid #000000;
+}
+
+/* line 250, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+span.status.true {
+  background: green;
+  color: green;
+}
+
+/* line 255, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+span.status.false {
+  background: red;
+  color: red;
+}
+
+/* Errors */
+/* line 265, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+.fieldWithErrors label {
+  color: #AA0000;
+}
+
+/* line 273, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation {
+  width: 400px;
+  padding: 0;
+  margin: 0 auto 1.5em;
+  border: 1px solid #AA0000;
+  background-color: #FFFFFF;
+  font-size: 12px;
+}
+
+/* line 282, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation h2 {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 5px;
+  margin: 0;
+  width: 380px;
+  background-color: #AA0000;
+  color: #FFFFFF;
+}
+
+/* line 292, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation p {
+  color: #333333;
+  margin: 0;
+  padding: 3px 0.5em;
+}
+
+/* line 298, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation ul {
+  margin-top: 0;
+}
+
+/* line 302, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/admin.scss */
+#errorExplanation ul li {
+  list-style: square;
+}
+/* line 5, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#loginSignUpBox {
+  float: right;
+  display: inline;
+  margin-right: 2em;
+  margin-top: 1em;
+  padding: 1em 2em 1em 2em;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 16, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#feedMe {
+  font-size: 200%;
+}
+
+/* line 20, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#title {
+  float: left;
+  display: inline;
+  margin-left: 2em;
+}
+
+/* line 26, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#topBlock {
+  background: linear-gradient(to right, #33cc33, #009933);
+  padding-bottom: 2em;
+}
+
+/* line 31, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#login {
+  animation-name: loginPop;
+  animation-duration: 3s;
+}
+
+@keyframes loginPop {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 45, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+#loginBox {
+  margin-left: 20em;
+  margin-right: 20em;
+  margin-top: 10em;
+  padding: 1em 1em 1em 1em;
+  border-style: solid;
+  border-color: black;
+  width: fixed;
+  background-color: white;
+  border-width: 2px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 58, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/access.scss */
+body {
+  background-color: #c6ecc6;
+}
+/*
+
+        Creating a sprite from following images:
+
+        app/assets/images/sprites/social-share-button/baidu.png (16x16)
+        app/assets/images/sprites/social-share-button/delicious.png (16x16)
+        app/assets/images/sprites/social-share-button/douban.png (16x16)
+        app/assets/images/sprites/social-share-button/email.png (16x16)
+        app/assets/images/sprites/social-share-button/facebook.png (16x16)
+        app/assets/images/sprites/social-share-button/flickr.png (16x16)
+        app/assets/images/sprites/social-share-button/google_bookmark.png (16x16)
+        app/assets/images/sprites/social-share-button/google_plus.png (16x16)
+        app/assets/images/sprites/social-share-button/kaixin001.png (16x16)
+        app/assets/images/sprites/social-share-button/pinterest.png (16x16)
+        app/assets/images/sprites/social-share-button/plurk.png (16x16)
+        app/assets/images/sprites/social-share-button/qq.png (16x16)
+        app/assets/images/sprites/social-share-button/renren.png (16x16)
+        app/assets/images/sprites/social-share-button/tqq.png (16x16)
+        app/assets/images/sprites/social-share-button/tumblr.png (16x16)
+        app/assets/images/sprites/social-share-button/twitter.png (16x16)
+        app/assets/images/sprites/social-share-button/weibo.png (16x16)
+
+        Output files:
+          app/assets/images/sprites/social-share-button.png
+          app/assets/stylesheets/social-share-button.scss
+
+        Output size:
+          80x64
+
+*/
+/* line 32, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-baidu {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px 0px no-repeat;
+}
+
+/* line 33, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-delicious {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px 0px no-repeat;
+}
+
+/* line 34, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-douban {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -16px no-repeat;
+}
+
+/* line 35, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-email {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -16px no-repeat;
+}
+
+/* line 36, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-facebook {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px 0px no-repeat;
+}
+
+/* line 37, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-flickr {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -16px no-repeat;
+}
+
+/* line 38, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-google_bookmark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -32px no-repeat;
+}
+
+/* line 39, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-google_plus {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -32px no-repeat;
+}
+
+/* line 40, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-kaixin001 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -32px no-repeat;
+}
+
+/* line 41, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-pinterest {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px 0px no-repeat;
+}
+
+/* line 42, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-plurk {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -16px no-repeat;
+}
+
+/* line 43, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-qq {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -32px no-repeat;
+}
+
+/* line 44, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-renren {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -48px no-repeat;
+}
+
+/* line 45, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-tqq {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -48px no-repeat;
+}
+
+/* line 46, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-tumblr {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -48px no-repeat;
+}
+
+/* line 47, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-twitter {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -48px no-repeat;
+}
+
+/* line 48, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-weibo {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -64px 0px no-repeat;
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+  /* line 51, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-baidu {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 52, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-delicious {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 53, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-douban {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 54, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-email {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 55, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-facebook {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 56, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-flickr {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 57, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-google_bookmark {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 58, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-google_plus {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 59, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-kaixin001 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 60, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-pinterest {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 61, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-plurk {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 62, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-qq {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 63, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-renren {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 64, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-tqq {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 65, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-tumblr {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 66, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-twitter {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 67, /home/asim/.rvm/gems/ruby-2.4.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-weibo {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -64px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+}
+/* line 1, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/custom.scss */
+#error_explanation {
+  color: red;
+}
+/* line 4, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/custom.scss */
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
+}
+
+/* line 11, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/custom.scss */
+.field_with_errors .form-control {
+  color: red;
+}
+/* line 5, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+body {
+  background-color: #c6ecc6;
+}
+
+/* line 11, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#signup_subscription_list {
+  background-color: white;
+  margin-right: 11em;
+  margin-left: 10em;
+  padding-top: 3em;
+  padding-left: 3em;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 23, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#welcomeSignupLoginBox {
+  float: right;
+  display: inline;
+  margin-right: 2em;
+  margin-top: 1em;
+  padding: 1em 2em 1em 2em;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 10px 10px 10px grey;
+  background-color: white;
+}
+
+/* line 35, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#title {
+  float: left;
+  display: inline;
+  margin-left: 2em;
+}
+
+/* line 41, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#topBlock {
+  background: linear-gradient(to right, #33cc33, #009933);
+  padding-bottom: 2em;
+}
+
+/* line 46, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#usersSignupTable {
+  margin: auto;
+  width: 50%;
+  padding: 3em 3em 3em 3em;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 10px 10px 10px grey;
+  background-color: white;
+}
+
+/* line 60, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+td {
+  position: relative;
+  left: 6em;
+  border-color: white;
+  border-width: 1em;
+  border-style: solid;
+}
+
+/* line 68, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+tr {
+  border-color: white;
+  border-width: 1em;
+  border-style: solid;
+}
+
+/* line 74, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#error_explanation {
+  color: red;
+}
+
+/* line 78, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
+}
+
+/* line 87, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+.form-control {
+  color: red;
+}
+
+/* line 91, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuBar {
+  margin-bottom: 2em;
+  margin-left: 8em;
+}
+
+/* line 96, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+.menu {
+  display: inline;
+  border-style: solid;
+  border-width: 3px;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  background-color: white;
+  box-shadow: 10px 10px 10px grey;
+}
+
+/* line 109, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuHome:hover {
+  background-color: #ff3377;
+}
+
+/* line 113, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuEditAccount:hover {
+  background-color: #ff3377;
+}
+
+/* line 117, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuSubscriptions:hover {
+  background-color: #ff3377;
+}
+
+/* line 121, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuFavorites:hover {
+  background-color: #ff3377;
+}
+
+/* line 125, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+#menuLogOut:hover {
+  background-color: #ff3377;
+}
+
+/* line 129, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+a {
+  text-decoration: none;
+  color: #00cc00;
+}
+
+/* line 134, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/users.scss */
+.favoritesCheckBox {
+  color: green;
+  float: right;
+  margin-right: 25em;
+}
+/* line 1, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/welcome.scss */
+body {
+  background: #c6ecc6;
+}
+
+/* line 5, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/welcome.scss */
+#welcomeSignupLoginBox {
+  width: fixed;
+  margin-left: 10em;
+  margin-right: 10em;
+  padding-left: 22em;
+  padding-top: 10em;
+}
+
+/* line 13, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/welcome.scss */
+#loginTab {
+  display: inline;
+}
+
+/* line 17, /media/asim/Local Disk/SFU/CMPT 276 - Software Engineering/Project/FeedMe/app/assets/stylesheets/welcome.scss */
+#signupTab {
+  display: inline;
+}
