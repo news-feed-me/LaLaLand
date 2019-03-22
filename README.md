@@ -22,10 +22,9 @@ Several apps and websites such as Google Current, RSS feeds, Flipboard, Pulse et
 
 ## How will this project make life easier?
 
-Unlike existing news feeds, FeedMe will not only provide a platform for users to read trending news, but also allow them to engage with it and express their opinions. It will provide the perfect intersection between news-reading and social engagement.
-In just one simple step, users will be able to create an account on FeedMe and customize their subscriptions by determining which publishers, categories,  and geographic locations they wish to receive news from. Moreover, once users have an account they will be able to share their favorite news articles on social media, write blogs to express their perspectives and receive notifications.
-
-By combing news-reading with the ability to engage with the content, FeedMe will immensely simplify the user’s experience.
+Unlike existing news feeds, FeedMe will also provide user interaction with the news feed by allowing them to express their views. It will provide the perfect intersection between news-reading and social engagement.
+In just one simple step, users will be able to create an account on FeedMe and customize their subscriptions by determining which publishers, categories, and geographic locations they wish to receive news from. Moreover, once users have an account they will be able to share their favorite news articles on social media, write blogs to express their perspectives and receive notifications.
+FeedMe will immensely simplify the user’s experience by combining news-raeding with the ability to engage with the content.
 
 ## Who is the target audience? Who will use your product?
 
