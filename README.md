@@ -13,7 +13,7 @@ Misha Chavarha
 
 ## Abstract:
 
-With the advent of digital media readers are overwhelmed with the volume of news and information available on the internet. An individual is left to navigate the numerous news websites and articles alone, and often finds himself lost in the massive amount of information. Our news aggregator web app, FeedMe, aims to simplify the news reading experience for people by acting as a one-stop-shop for the latest news from a variety of publishers, categories and  geographies. Moreover, FeedMe will allow the user to add and modify their subscriptions on the basis of categories, locations etc. Thus, we don’t just simplify, we empower the reader.
+With the advent of digital media, readers are overwhelmed with the volume of news and information flooded on the internet. An individual is left to navigate the numerous news websites and articles alone, and often finds himself lost in the massive amount of information. Our news aggregator web app, FeedMe, aims to simplify the news reading experience for people by acting as a one-stop-shop for the latest news from a variety of publishers, categories and  geographies. Moreover, FeedMe will allow the user to add and modify their subscriptions on the basis of categories, locations etc. Thus, we don’t just simplify, we empower the reader.
 
 
 ## How is this problem currently solved?
