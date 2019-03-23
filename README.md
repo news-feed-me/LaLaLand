@@ -23,7 +23,9 @@ Several apps and websites such as Google Current, RSS feeds, Flipboard, Pulse et
 ## How will this project make life easier?
 
 Unlike existing news feeds, FeedMe will also provide user interaction with the news feed by allowing them to express their views. It will provide the perfect intersection between news-reading and social engagement.
+
 In just one simple step, users will be able to create an account on FeedMe and customize their subscriptions by determining which publishers, categories, and geographic locations they wish to receive news from. Moreover, once users have an account they will be able to share their favorite news articles on social media, write blogs to express their perspectives and receive notifications.
+
 FeedMe will immensely simplify the user’s experience by combining news-raeding with the ability to engage with the content.
 
 ## Who is the target audience? Who will use your product?
@@ -34,14 +36,14 @@ While traditional news feed sites target avid news readers, our web app simplifi
 
 Currently, the goal is to centralize news feeds for the users / subscribers.  With further iterations we plan to incorporate additional features such as news sharing, chatting, blogging, notifications, favorite section and so on. These are the epics / individual features and they will be added to our project with each iteration. We expect our application to scale nicely with the number of features and news channel subscriptions that it can support.
 
-## What are some sample stories/scenarios? For example, as  a regular user to your site, what types of things can I do? As an admin for your site? These are the ‘stories’ of your project.
+## User Stories as different users
 
-As a computer science student who is very passionate about block-chain technology, I would like to keep myself updated about new developments in the field. I can imagine using this application to have access to the aggregated information.
+As a computer science student who is very passionate about block-chain technology, I would like to keep myself updated about new technology developments in the field. I can imagine using this application to have access to the aggregated information.
 
-As a CMPT276 student I rarely have time to scroll and look for new articles that meet my specific needs, therefore with FeedMe I would be able to quickly search for specific articles with specific keywords
+As a CMPT276 student I rarely have time to scroll for new articles that meet my specific needs, with FeedMe I would be able to quickly search for specific articles with my personalized keywords.
 
 As a cricket fan I would use FeedMe to search for relevant articles about specific cricket matches, scorecard updates, analysis reports and highlights.
 
-As an individual running an ecommerce business in men’s style, I would utilize FeedMe’s aggregate feature to facilitate my research on the current and latest style trends in the market and save me a considerable amount of time.
+As an entrepreneur, I would utilize FeedMe’s aggregate feature to facilitate my research on the current and latest style trends in the market and save me a considerable amount of time.
 
-As an avid blogger, FeedMe would allow me to openly discuss news articles that are of interest to me with other readers who may share the same interests.
+As an avid blogger, FeedMe would allow me to openly discuss news articles with other users with shared interests.
