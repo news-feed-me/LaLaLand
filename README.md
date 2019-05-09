@@ -6,7 +6,6 @@ Asim Himani
 Akio Christopher Suzuki - asuzuki@sfu.ca <br />
 Cora Xiaotong <br />
 Dan Tang - dltang@sfu.ca <br />
-Misha Chavarha
 
 
 
